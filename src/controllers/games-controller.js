@@ -20,8 +20,9 @@ const createGame = async (req, res) => {
     }
 };
 
-const deleteGame = (req, res) => {
-    res.status(200).send({status:'OK', data:'hola'}) 
+const deleteGame = async  (req, res) => {
+    const games = await Games.find();
+        res.send({status:'OK',data:games})
 };
 
 const getGames = async (req, res) => {
