@@ -19,7 +19,7 @@ routesv1(app);
 const PORT = process.env.PORT || 4000;
 
 
-mongoose.connect('mongodb+srv://martin:game-space97@game-space-nnfa0.gcp.mongodb.net/test', {
+mongoose.connect('mongodb+srv://martin:game-space97@game-space-nnfa0.gcp.mongodb.net/game-space', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(()=>{
