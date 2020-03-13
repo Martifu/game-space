@@ -21,7 +21,7 @@ const createGame = async (req, res) => {
 };
 
 const deleteGame = (req, res) => {
-    res.body({message:'hola'});
+    res.status(200).send({status:'OK', data:'hola'}) 
 };
 
 const getGames = async (req, res) => {
