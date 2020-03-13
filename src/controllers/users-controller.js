@@ -37,7 +37,7 @@ const login = async (req,res)=>{
 const createUser = async (req, res) => {
     try {
 
-        const {username, email, password, data} = req.body; 
+        const {username, email, password, data,role} = req.body; 
         const hash = await bcrypt.hash(password, 15 );
 
         await Users.create({
