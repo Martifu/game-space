@@ -20,7 +20,9 @@ const createGame = async (req, res) => {
     }
 };
 
-const deleteGame = (req, res) => {};
+const deleteGame = (req, res) => {
+    res.body({message:'hola'});
+};
 
 const getGames = async (req, res) => {
     try {
