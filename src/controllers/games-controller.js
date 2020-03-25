@@ -22,7 +22,7 @@ const createGame = async (req, res) => {
 
 const deleteGame = async  (req, res) => {
     const games = await Games.find();
-        res.send({status:'OKasdasdasdasdis',data:games})
+        res.send({status:'OK',data:games})
 };
 
 const getGames = async (req, res) => {
