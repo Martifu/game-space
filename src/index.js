@@ -3,12 +3,24 @@ const routesv1 = require('./routes/index.js');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 var mongoose = require('mongoose');
+const path = require('path');
+const router = express.Router();
+
+
 
 dotenv.config();
 
 const app = express();
 
+app.use('/static', express.static(path.join(__dirname, 'assets')))
 
+router.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/index.html'));
+    //__dirname : It will resolve to your project folder.
+  });
+  
+  //add the router
+  app.use('/', router);
 
 app.use(bodyParser.urlencoded({extended:false}))
 

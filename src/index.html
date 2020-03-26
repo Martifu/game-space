@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Diego Velázquez">
+  <meta name="description" content="Como hacer un header dinamico con HTML, CSS y Javascript - Templune">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="static/css/styles.css">
+
+  <!-- Ionic icons -->
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+
+  <title>Game Space</title>
+</head>
+
+<body>
+  <div id="loader" class="position-absolute w-100 bg-light">
+    <div class="position-relative d-flex align-self-center mx-auto">
+      <div class="spinner align-self-center"></div><h1 class="d-inline-block ml-3 mb-0" >GameSpace</h1>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-transparent position-absolute w-100">
+    <div class="container">
+    <a class="navbar-brand  font-weight-bold" href="#" style="color: #5c6cfc;">GameSpace</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="icon ion-md-menu lead"></i>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item mr-4">
+          <a class="nav-link text-dark" href="#">Acerca de nosotros</a>
+        </li>
+        <li class="nav-item mr-4">
+          <a class="nav-link text-dark" href="#">Servicios</a>
+        </li>
+        <li class="nav-item mr-4">
+          <a class="nav-link text-dark" href="#">Ubicación</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><a href="" class="btn btn-dark">Contáctanos <i class="icon ion-md-mail lead align-middle"></i></a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+  <section class="h-100">
+    <div class="row no-gutters h-100">
+      <div class="col-lg-7 col-md-12 content bg-light d-flex">
+        <div class="align-self-center w-75 mx-auto">
+          <div class="has-animation animation-ltr d-inline-block" data-delay="2500">
+            <h1 class="display-3 font-weight-bold text-uppercase m-0">Comienza a comprar</h1>
+          </div>
+
+          <div class="has-animation animation-rtl d-inline-block my-5" data-delay="3500">
+            <p class="lead text-muted">Somos un equipo de videojugadores apasionados por nuestro trabajo. Para nosotros lo más importante son los hermanos videojugadores como tú. Así que nos levantamos todos los días con una sola idea en la mente: poner el mejor entretenimiento en videojuegos en tus manos.</p>
+          </div>
+
+          <div class="has-animation animation-ltr d-inline-block" data-delay="3500">
+            <a href="" class="btn btn-dark py-3 px-4" >Descarga nuestra app <i class="icon ion-md-arrow-forward lead align-middle ml-3"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-12 content bg-grey d-flex">
+        <div class="align-self-center justify-content-center d-flex w-100 h-100">
+          <img id="phone" src="static/img/iphone.png" class="img-fluid position-absolute align-self-center">
+          <div id="gradient" class="position-absolute align-self-center"></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="static/js/jquery.js"></script>
+  <script src="static/js/popper.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        document.getElementById('loader').style.cssText = 'opacity: 0; z-index: 1';
+      }, 1500);
+      setTimeout(function() {
+        document.getElementById('gradient').style.opacity = '1';
+      }, 6000);
+      setTimeout(function() {
+        document.getElementById('phone').style.opacity = '1';
+      }, 7000);
+    }
+
+    let animation = document.getElementsByClassName('has-animation');
+
+    for (const element of animation) {
+      setTimeout(function() {
+        element.classList.add('animate-in')
+      }, element.dataset.delay)
+    }
+  </script>
+</body>
+
+</html>
