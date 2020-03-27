@@ -53,8 +53,9 @@ const getNewRelease = async (req,res) => {
         const games = await Games.find({
             year:{ $gte: new Date('2020-01-01')}
         });
+        fecha = new Date('2020-01-01');
         
-        res.status(200).send({"status":"Ok", data:games});
+        res.status(200).send({"status":"Ok", data:games, fecha: fecha});
         
     } catch (error) {
         fecha = new Date('2020-01-01');
