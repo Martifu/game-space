@@ -36,7 +36,7 @@ const getGames = async (req, res) => {
 };
 
 const getGamesbyCategory = async (req,res)=>{
-    
+
     try {
         const games =  await Games.find({
             category:req.params.category
@@ -50,13 +50,13 @@ const getGamesbyCategory = async (req,res)=>{
 
 const getNewRelease = async (req,res) => {
     try {
-        
+
         const games = await Games.find({
             year:{ "$gte":  new Date('2020-01-01').toISOString()}
         });
-        
+
         res.status(200).send({"status":"Ok", data:games});
-        
+
     } catch (error) {
         res.status(500).send({"status":"Error",error:error.message});
     }
@@ -74,7 +74,20 @@ const getGame_Search = async (req, res) =>{
     } catch (error) {
         res.status(500).send({"status":"Error",error:error.message});
     }
-}
+};
 
+const  getPopular= async (req,res)=>{
+    try {
+        const game = await Games.find({
+            title:{
+                $eq:req.params.rank
+            }
+        })
+        res.status(200).send({'status':"ok", data:game});
+    } catch (error) {
+        res.status(500).send({"status":"Error",error:error.message});
+    }
 
-module.exports = { createGame, deleteGame, getGames , getGamesbyCategory, getNewRelease, getGame_Search};
+};
+
+module.exports = { createGame, deleteGame, getGames , getGamesbyCategory, getNewRelease, getGame_Search,getPopular};
