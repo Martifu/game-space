@@ -70,10 +70,9 @@ const getGame_Search = async (req, res) =>{
         
             const games = await Games.find({
                 $or:[
-                    {title: { $regex: req.params.data }},
-                    {description:  { $regex: req.params.data }},
-                    {image: { $regex: req.params.data }},
-                    {category: { $regex: req.params.data }},
+                    {title: { $regex: req.params.data, $options: 'i' }},
+                    {description:  { $regex: req.params.data, $options: 'i' }},
+                    {category: { $regex: req.params.data, $options: 'i' }},
 
                 ]
             })
