@@ -99,4 +99,14 @@ const  getPopular= async (req,res)=>{
 
 };
 
-module.exports = { createGame, deleteGame, getGames , getGamesbyCategory, getNewRelease, getGame_Search,getPopular};
+const getGames_Bestseller = async (req, res) => {
+    try {
+        const games = await Games.find();
+        res.send({status:'OK',data:games})
+    } catch (error) {
+        console.log('getGames error',error);
+        res.status(500).send({status:'ERROR', data:error.message})
+    }
+};
+
+module.exports = { createGame, deleteGame, getGames , getGamesbyCategory, getNewRelease, getGame_Search, getPopular, getGames_Bestseller};

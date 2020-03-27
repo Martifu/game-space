@@ -10,4 +10,5 @@ router.get('/get-games-category/:category', gamesController.getGamesbyCategory);
 router.get('/new-release', gamesController.getNewRelease);
 router.get('/populares',gamesController.getPopular);
 router.get('/search/:data', gamesController.getGame_Search);
+router.get('/bestseller', gamesController.getGames_Bestseller);
 module.exports = router;
