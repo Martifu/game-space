@@ -8,5 +8,5 @@ router.get('/get-games', gamesController.getGames);
 router.get('/delete', gamesController.deleteGame);
 router.get('/get-games-category/:category', gamesController.getGamesbyCategory);
 router.get('/new-release', gamesController.getNewRelease);
-
+router.get('/search/:name', gamesController.getGame_Search);
 module.exports = router;

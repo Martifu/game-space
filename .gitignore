@@ -2,3 +2,5 @@
 .prettierrc
 .vscode/
 node_modules/
+.env
+.env.example

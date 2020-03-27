@@ -58,10 +58,23 @@ const getNewRelease = async (req,res) => {
         res.status(200).send({"status":"Ok", data:games});
         
     } catch (error) {
-        res.status(500).send({"status":"Error",});
+        res.status(500).send({"status":"Error",error:error.message});
     }
 
 };
 
+const getGame_Search = async (req, res) =>{
+    try {
+        const game = await Games.find({
+            title:{
+                $eq:req.params.name
+            }
+        })
+        res.status(200).send({'status':"ok", data:game});
+    } catch (error) {
+        res.status(500).send({"status":"Error",error:error.message});
+    }
+}
 
-module.exports = { createGame, deleteGame, getGames , getGamesbyCategory, getNewRelease};
+
+module.exports = { createGame, deleteGame, getGames , getGamesbyCategory, getNewRelease, getGame_Search};
