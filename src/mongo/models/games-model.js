@@ -9,7 +9,6 @@ const gamesSchema = new Schema({
     category: {type:String, required:true},
     year: {type:Date, required:true},
     rank: {type:Number, required:true},
-    sale: {type:Number, required:false, default:0},
 },
 {
     timestamps:true
