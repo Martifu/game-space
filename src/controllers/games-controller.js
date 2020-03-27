@@ -64,13 +64,23 @@ const getNewRelease = async (req,res) => {
 };
 
 const getGame_Search = async (req, res) =>{
+    
     try {
-        const game = await Games.find({
-            title:{
-                $eq:req.params.name
-            }
-        })
-        res.status(200).send({'status':"ok", data:game});
+        
+        
+            const games = await Games.find({
+                $or:[
+                    {title: { $regex: req.params.data }},
+                    {description:  { $regex: req.params.data }},
+                    {image: { $regex: req.params.data }},
+                    {category: { $regex: req.params.data }},
+
+                ]
+            })
+        
+        
+        
+        res.status(200).send({'status':"ok", data:games});
     } catch (error) {
         res.status(500).send({"status":"Error",error:error.message});
     }
