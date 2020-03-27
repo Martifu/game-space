@@ -48,4 +48,18 @@ const getGamesbyCategory = async (req,res)=>{
     }
 };
 
-module.exports = { createGame, deleteGame, getGames , getGamesbyCategory};
+const getNewRelease = async (req,res) => {
+    try {
+        const games = await Games.find({
+            year:{ $gt: "01/01/2020"}
+        });
+        res.status(200).send({"status":"Ok", data:games});
+        
+    } catch (error) {
+        res.status(500).send({"status":"Error", "error":error.message});
+    }
+
+};
+
+
+module.exports = { createGame, deleteGame, getGames , getGamesbyCategory, getNewRelease};

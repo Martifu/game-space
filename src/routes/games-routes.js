@@ -7,5 +7,6 @@ router.post('/create', gamesController.createGame);
 router.get('/get-games', gamesController.getGames);
 router.get('/delete', gamesController.deleteGame);
 router.get('/get-games-category/:category', gamesController.getGamesbyCategory);
+router.get('/new-release', gamesController.getNewRelease);
 
 module.exports = router;
