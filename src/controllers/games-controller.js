@@ -1,5 +1,5 @@
 const Games = require('../mongo/models/games-model')
-
+const isodate = require('isodate');
 const createGame = async (req, res) => {
     try {
         const {title, price, image, description, rank, year,category} = req.body;
@@ -50,16 +50,15 @@ const getGamesbyCategory = async (req,res)=>{
 
 const getNewRelease = async (req,res) => {
     try {
-        fecha = new Date('2020-01-01');
+        
         const games = await Games.find({
-            year:{ $gte: fecha}
+            year:{ "$gte":  new Date('2020-01-01').toISOString()}
         });
         
-        res.status(200).send({"status":"Ok", data:games, fecha: fecha});
+        res.status(200).send({"status":"Ok", data:games});
         
     } catch (error) {
-        fecha = new Date('2020-01-01');
-        res.status(500).send({"status":"Error", "error":error.message, "fecha":fecha});
+        res.status(500).send({"status":"Error",});
     }
 
 };

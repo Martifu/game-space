@@ -7,7 +7,7 @@ const gamesSchema = new Schema({
     price:  {type:Number, required:true},
     image: {type:String, required:true},
     category: {type:String, required:true},
-    year: {type:String, required:true},
+    year: {type:Date, required:true},
     rank: {type:Number, required:true},
 },
 {
