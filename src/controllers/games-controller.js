@@ -50,10 +50,10 @@ const getGamesbyCategory = async (req,res)=>{
 
 const getNewRelease = async (req,res) => {
     try {
-        const games = await Games.find({
-            year:{ $gte: new Date('2020-01-01')}
-        });
         fecha = new Date('2020-01-01');
+        const games = await Games.find({
+            year:{ $gte: fecha}
+        });
         
         res.status(200).send({"status":"Ok", data:games, fecha: fecha});
         
