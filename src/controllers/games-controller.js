@@ -51,12 +51,14 @@ const getGamesbyCategory = async (req,res)=>{
 const getNewRelease = async (req,res) => {
     try {
         const games = await Games.find({
-            year:{ $gte: ISODate(2020)}
+            year:{ $gte: new Date('2020-01-01')}
         });
+        
         res.status(200).send({"status":"Ok", data:games});
         
     } catch (error) {
-        res.status(500).send({"status":"Error", "error":error.message});
+        fecha = new Date('2020-01-01');
+        res.status(500).send({"status":"Error", "error":error.message, "fecha":fecha});
     }
 
 };
