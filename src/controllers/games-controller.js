@@ -26,6 +26,11 @@ const deleteGame = async  (req, res) => {
 };
 
 const getGames = async (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*');
+
+    // authorized headers for preflight requests
+    // https://developer.mozilla.org/en-US/docs/Glossary/preflight_request
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     try {
         const games = await Games.find();
         res.send({status:'OK',data:games})
