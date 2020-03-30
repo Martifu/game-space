@@ -5,11 +5,11 @@ const gamesSchema = new Schema({
     title: {type:String, required:true},
     description:  {type:String, required:true},
     price:  {type:Number, required:true},
-    image: {type:String, required:true},
+    image: {type:String, required:false},
     category: {type:String, required:true},
     year: {type:Date, required:true},
     rank: {type:Number, required:true},
-    sale: {type:Number, required:false, default:0},
+    sales: {type:Number, required:false, default:0},
 },
 {
     timestamps:true

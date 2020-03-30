@@ -109,4 +109,42 @@ const getGames_Bestseller = async (req, res) => {
     }
 };
 
-module.exports = { createGame, deleteGame, getGames , getGamesbyCategory, getNewRelease, getGame_Search, getPopular, getGames_Bestseller};
+const registrarGames = async (req, res) => {
+    console.log(req);
+
+    try {
+        const game = await new Games({
+          title: req.body.title,
+          description: req.body.description,
+          price: req.body.price,
+          image: req.body.image,
+          category: req.body.category,
+          year: new Date(req.body.year).toISOString(),
+          rank: req.body.rank,
+          sales: 0,
+          createdAt: new Date().toISOString(),
+          updateAt: new Date().toISOString(),
+          __v: 0
+        });
+        game.save( (error ) => {
+            if (error) {
+                return error;
+            }
+            res.status(200).send({status:"ok", message:"Se registro de manera correcta"})
+        })
+    } catch (error) {
+        console.log("registrar", error);
+        res.status(500).send({status:"error", data:error.message})
+    }
+
+}
+
+module.exports = {  createGame, 
+                    deleteGame, 
+                    getGames , 
+                    getGamesbyCategory, 
+                    getNewRelease, 
+                    getGame_Search,
+                    getPopular, 
+                    getGames_Bestseller,
+                    registrarGames};
