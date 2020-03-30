@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 var mongoose = require('mongoose');
 const path = require('path');
 const router = express.Router();
+var mysql = require('promise-mysql');
 
 
 
@@ -43,3 +44,5 @@ mongoose.connect('mongodb+srv://martin:game-space97@game-space-nnfa0.gcp.mongodb
 app.listen(PORT, function() {
     console.log('Corriendo en puerto 4000');
 });
+
+mysql.createPool()
