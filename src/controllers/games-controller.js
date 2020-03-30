@@ -1,4 +1,5 @@
 const Games = require('../mongo/models/games-model')
+const MySQL = require ('../sql/database');
 
 const createGame = async (req, res) => {
     try {
@@ -116,6 +117,8 @@ const registrarGames = async (req, res) => {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
     try {
+
+        //Mongo
         const game = await new Games({
           title: req.body.title,
           description: req.body.description,
@@ -135,6 +138,11 @@ const registrarGames = async (req, res) => {
             }
             res.status(200).send({status:"ok", message:"Se registro de manera correcta"})
         })
+
+        //MySQL
+        //await MySQL.query()
+
+
     } catch (error) {
         console.log("registrar", error);
         res.status(500).send({status:"error", data:error.message})
