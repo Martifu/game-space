@@ -5,6 +5,7 @@ const createGame = async (req, res) => {
     try {
         const {title, price, image, description, rank, year,category} = req.body;
 
+        //Mongo
         const game = await Games.create({
             title,
             description,
@@ -15,9 +16,8 @@ const createGame = async (req, res) => {
             rank
         });
         //MySQL
+        await MySQL.query('INSERT INTO Games (`id_mongo`) VALUES ("' + game._id + '")')
         
-        await MySQL.query('INSERT INTO Games (`id_mongo`) VALUES ("'+game._id+'")')
-        console.log(game._id);
         res.status(200).send({data:game})
     } catch (e) {
         console.log('createProduct error', e)
