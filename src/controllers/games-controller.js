@@ -109,4 +109,13 @@ const getGames_Bestseller = async (req, res) => {
     }
 };
 
-module.exports = { createGame, deleteGame, getGames , getGamesbyCategory, getNewRelease, getGame_Search, getPopular, getGames_Bestseller};
+module.exports = { 
+        createGame, 
+        deleteGame, 
+        getGames , 
+        getGamesbyCategory,
+        getNewRelease, 
+        getGame_Search, 
+        getPopular, 
+        getGames_Bestseller
+    };
