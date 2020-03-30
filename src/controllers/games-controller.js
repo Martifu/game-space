@@ -27,8 +27,7 @@ const deleteGame = async  (req, res) => {
 };
 
 const getGames = async (req, res) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    
     try {
         const games = await Games.find();
         res.send({status:'OK',data:games})
@@ -113,9 +112,7 @@ const getGames_Bestseller = async (req, res) => {
 };
 
 const registrarGames = async (req, res) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-
+    
     try {
 
         //Mongo
