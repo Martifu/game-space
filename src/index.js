@@ -13,6 +13,18 @@ dotenv.config();
 
 const app = express();
 
+app.use((req, res, next) =>{
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+
+    app.options('*', (req, res) => {
+        // allowed XHR methods  
+        res.header('Access-Control-Allow-Methods', 'GET, PATCH, PUT, POST, DELETE, OPTIONS');
+        res.send();
+    });
+})
+
 app.use('/static', express.static(path.join(__dirname, 'assets')))
 
 router.get('/',function(req,res){
