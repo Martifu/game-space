@@ -19,17 +19,13 @@ const createGame = async (req, res) => {
         //MySQL
         await MySQL.query('INSERT INTO Games (`id_mongo`) VALUES ("' + game._id + '")')
         
-        res.status(200).send({data:game})
+        res.status(200).send({statis:"ok", message:"Se registro correctamente" ,data:game})
     } catch (e) {
         console.log('createProduct error', e)
         res.status(500).send({status:'ERROR',data:e.message})
     }
 };
 
-const deleteGame = async  (req, res) => {
-    const games = await Games.find();
-        res.send({status:'OKa',data:games});
-};
 
 const getGames = async (req, res) => {
     
@@ -116,36 +112,50 @@ const getGames_Bestseller = async (req, res) => {
     }
 };
 
-const registrarGames = async (req, res) => {
-    
+const gamebyid = async (req, res) => {
     try {
 
-        //Mongo
-        const game = await new Games({
-          title: req.body.title,
-          description: req.body.description,
-          price: req.body.price,
-          image: req.body.image,
-          category: req.body.category,
-          year: new Date(req.body.year).toISOString(),
-          rank: req.body.rank,
-          sales: 0,
-          createdAt: new Date().toISOString(),
-          updateAt: new Date().toISOString(),
-          __v: 0
-        });
-        game.save( (error ) => {
-            if (error) {
-                return error;
-            }
-            res.status(200).send({status:"ok", message:"Se registro de manera correcta"})
-        })
- 
+        const game = await Games.findById(
+            req.params.id
+        );
+        res.status(200).send({status:"ok", data:game});
+        
     } catch (error) {
-        console.log("registrar", error);
-        res.status(500).send({status:"error", data:error.message})
+        res.status(400).send({status:"Error", message:"No se encontro este juego"});
     }
+}
 
+const editGame = async (req, res) => {
+    try {
+        const game = await Games.updateOne({
+            _id:req.params.id
+        }, {
+            $set: {
+                title: req.body.title,
+                description: req.body.description,
+                price: req.body.price,
+                image: req.body.image,
+                category: req.body.category,
+                year: new Date(req.body.year).toISOString(),
+                rank: req.body.rank,
+            }
+        });
+        res.status(200).send({status:"Ok", message:"Se edito correctamente", data:game});
+    } catch (error) {
+        res.status(500).send({status:"error", message:"Hubo un problema con la conexion", data:error});
+    }
+}
+
+const deleteGame = async (req, resp) => {
+    try {
+
+        const game = await Games.deleteOne({
+            _id:req.params.id
+        });
+        res.status(200).send({status:"Ok", message:"Se elimino correctamente", data:game});
+    } catch (error) {
+        res.status(500).send({status:"error", message:"Hubo un problema con la conexion", data:error});
+    }
 }
 
 module.exports = {  createGame, 
@@ -156,4 +166,7 @@ module.exports = {  createGame,
                     getGame_Search,
                     getPopular, 
                     getGames_Bestseller,
-                    registrarGames};
+                    registrarGames,
+                    gamebyid,
+                    editGame,
+                    deleteGame};
