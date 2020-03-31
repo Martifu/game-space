@@ -12,6 +12,6 @@ router.get('/populares',gamesController.getPopular);
 router.get('/search/:data', gamesController.getGame_Search);
 router.get('/bestseller', gamesController.getGames_Bestseller);
 router.post('/registrer_game', gamesController.registrarGames);
-router.post('/gamebyid/:id', gamesController.gamebyid);
+router.get('/gamebyid/:id', gamesController.gamebyid);
 
 module.exports = router;
