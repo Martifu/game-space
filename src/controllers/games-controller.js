@@ -192,4 +192,5 @@ module.exports = {  createGame,
                     getPopular, 
                     getGames_Bestseller,
                     registrarGames,
-                    gamebyid};
+                    gamebyid,
+                    editGame};
