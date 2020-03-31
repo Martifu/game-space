@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const Users = require('../mongo/models/users-model');
+const MySQL = require ('../sql/database');
 
 const  expiresIn = 60*10;
 
@@ -40,13 +41,17 @@ const createUser = async (req, res) => {
         const {username, email, password, data,role} = req.body; 
         const hash = await bcrypt.hash(password, 15 );
 
-        await Users.create({
+        //Mongo
+        const user = await Users.create({
             username,
             email,
             password:hash,
             data,
             role
         });
+        //MySQL
+        await MySQL.query('INSERT INTO Users (`id_mongo`) VALUES ("' + user._id + '")')
+
         res.send({status:'OK', message: 'Usuario creado'}) 
     } catch (error) {
         if (error.code && error.code === 11000) {
