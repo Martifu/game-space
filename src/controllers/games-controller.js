@@ -147,6 +147,19 @@ const registrarGames = async (req, res) => {
 
 }
 
+const gamebyid = async (req, res) => {
+    try {
+
+        const game = await Games.findById(
+            req.params.id
+        );
+        res.status(200).send({status:"ok", data:game});
+        
+    } catch (error) {
+        res.status(400).send({status:"Error", message:"No se encontro este juego"});
+    }
+}
+
 module.exports = {  createGame, 
                     deleteGame, 
                     getGames , 
@@ -155,4 +168,5 @@ module.exports = {  createGame,
                     getGame_Search,
                     getPopular, 
                     getGames_Bestseller,
-                    registrarGames};
+                    registrarGames,
+                    gamebyid};
