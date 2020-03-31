@@ -2,6 +2,7 @@ const Games = require('../mongo/models/games-model')
 const MySQL = require ('../sql/database');
 
 const createGame = async (req, res) => {
+    console.log(req.body);
     try {
         const {title, price, image, description, rank, year,category} = req.body;
 
