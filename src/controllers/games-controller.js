@@ -174,8 +174,6 @@ const editGame = async (req, res) => {
                 year: new Date(req.body.year).toISOString(),
                 rank: req.body.rank,
             }
-        }, (err) => {
-            res.status(500).send({status:"Error", error:err});
         });
         res.status(200).send({status:"Ok", message:"Se registro correctamente", data:game});
     } catch (error) {
