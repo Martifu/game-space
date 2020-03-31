@@ -160,6 +160,29 @@ const gamebyid = async (req, res) => {
     }
 }
 
+const editGame = async (req, res) => {
+    try {
+        const game = await Games.updateOne({
+            _id:req.params.id
+        }, {
+            $set: {
+                title: req.body.title,
+                description: req.body.description,
+                price: req.body.price,
+                image: req.body.image,
+                category: req.body.category,
+                year: new Date(req.body.year).toISOString(),
+                rank: req.body.rank,
+            }
+        }, (err) => {
+            res.status(500).send({status:"Error", error:err});
+        });
+        res.status(200).send({status:"Ok", message:"Se registro correctamente", data:game});
+    } catch (error) {
+        res.status(500).send({status:"error", message:"Hubo un problema con la conexion", data:error});
+    }
+} 
+
 module.exports = {  createGame, 
                     deleteGame, 
                     getGames , 

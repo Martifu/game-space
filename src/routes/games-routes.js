@@ -13,5 +13,6 @@ router.get('/search/:data', gamesController.getGame_Search);
 router.get('/bestseller', gamesController.getGames_Bestseller);
 router.post('/registrer_game', gamesController.registrarGames);
 router.get('/gamebyid/:id', gamesController.gamebyid);
+router.post('/editgame/:id')
 
 module.exports = router;
