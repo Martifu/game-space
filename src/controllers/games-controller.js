@@ -146,7 +146,7 @@ const editGame = async (req, res) => {
     }
 }
 
-const deleteGame = async (req, resp) => {
+const deleteGame = async (req, res) => {
     try {
 
         const game = await Games.deleteOne({
