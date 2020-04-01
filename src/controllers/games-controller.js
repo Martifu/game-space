@@ -165,7 +165,6 @@ module.exports = {  createGame,
                     getGame_Search,
                     getPopular, 
                     getGames_Bestseller,
-                    registrarGames,
                     gamebyid,
                     editGame,
                     deleteGame};
