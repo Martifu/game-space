@@ -102,7 +102,22 @@ const updateUser = async (req, res) => {
         }
         res.status(500).send({status:'ERROR', data:error.message})
     }
+
+    const userById = async (req, res) => {
+        try {
+            const user = await Users.findById(req.params.id);
+            if (user){
+                res.status(200).send({status:"OK", data:user});
+            } else {
+                res.status(404).send({status:"No found", message:"No se encontro el usuario"});
+            }
+            
+        } catch (error) {
+            res.status(200).send({status:"OK", error:error});
+            
+        }
+    }
     
 };
 
-module.exports = { createUser, deleteUser, getUsers, updateUser, login };
+module.exports = { createUser, deleteUser, getUsers, updateUser, login, userById };
