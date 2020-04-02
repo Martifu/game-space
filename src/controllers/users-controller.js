@@ -69,7 +69,17 @@ const deleteUser = (req, res) => {
     res.send({status:'OK', message: 'Usuario borrado'})
 };
 
-const getUsers = (req, res) => {
+const getUsers = async (req, res) => {
+    try {
+        const users = await Users.find();
+        res.status(200).send({status:"Ok", data:users});
+        
+    } catch (error) {
+        res.status(500).send({status:"Error", message:"Error con los usuarios", error:error});
+    }
+
+
+
     res.send({status:'OK', message: []})
 };
 
