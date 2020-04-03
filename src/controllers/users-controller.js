@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const Users = require('../mongo/models/users-model');
 const MySQL = require ('../sql/database');
 
-const  expiresIn = 60*10;
+const  expiresIn = 630*10;
 
 const login = async (req,res)=>{
     try {
@@ -86,10 +86,8 @@ const getUsers = async (req, res) => {
 const updateUser = async (req, res) => {
 
     try {
-        const {username, email, data,  role} = req.body; 
+        const { data,  role} = req.body; 
         await Users.findByIdAndUpdate(req.sessionData.userId,{
-            username,
-            email,
             data, 
             role
         });
