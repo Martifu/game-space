@@ -13,7 +13,7 @@ const isAuth = (req,res,next) =>{
     try {
         const {token} = req.headers;
         if (token) {
-            const data = jwt.verify(token, process.env.JWT_SECRET); 
+            const data = jwt.verify(token, process.env.JWT_SECRET);
             req.sessionData = {userId:data.userId}
             next();
         } else {

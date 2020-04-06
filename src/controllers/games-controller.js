@@ -2,9 +2,11 @@ const Games = require('../mongo/models/games-model')
 const MySQL = require ('../sql/database');
 
 const createGame = async (req, res) => {
+    console.log(req.body);
     try {
         const {title, price, image, description, rank, year,category} = req.body;
 
+        //Mongo
         const game = await Games.create({
             title,
             description,
@@ -14,24 +16,19 @@ const createGame = async (req, res) => {
             year,
             rank
         });
-        res.status(200).send({data:game})
+        //MySQL
+        await MySQL.query('INSERT INTO Games (`id_mongo`) VALUES ("' + game._id + '")')
+        
+        res.status(200).send({statis:"ok", message:"Se registro correctamente" ,data:game})
     } catch (e) {
         console.log('createProduct error', e)
         res.status(500).send({status:'ERROR',data:e.message})
     }
 };
 
-const deleteGame = async  (req, res) => {
-    const games = await Games.find();
-        res.send({status:'OKa',data:games});
-};
 
 const getGames = async (req, res) => {
-    res.header('Access-Control-Allow-Origin', '*');
-
-    // authorized headers for preflight requests
-    // https://developer.mozilla.org/en-US/docs/Glossary/preflight_request
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    
     try {
         const games = await Games.find();
         res.send({status:'OK',data:games})
@@ -115,62 +112,97 @@ const getGames_Bestseller = async (req, res) => {
     }
 };
 
-module.exports = { 
-        createGame, 
-        deleteGame, 
-        getGames , 
-        getGamesbyCategory,
-        getNewRelease, 
-        getGame_Search, 
-        getPopular, 
-        getGames_Bestseller
-    };
 
 const registrarGames = async (req, res) => {
     console.log(req);
-
-    try {
-
-        //Mongo
-        const game = await new Games({
-          title: req.body.title,
-          description: req.body.description,
-          price: req.body.price,
-          image: req.body.image,
-          category: req.body.category,
-          year: new Date(req.body.year).toISOString(),
-          rank: req.body.rank,
-          sales: 0,
-          createdAt: new Date().toISOString(),
-          updateAt: new Date().toISOString(),
-          __v: 0
-        });
-        game.save( (error ) => {
-            if (error) {
-                return error;
-            }
-            res.status(200).send({status:"ok", message:"Se registro de manera correcta"})
-        })
-
-        //MySQL
-        //await MySQL.query()
-
-
-    } catch (error) {
-        console.log("registrar", error);
-        res.status(500).send({status:"error", data:error.message})
-    }
-
 }
 
-module.exports = {
-        createGame, 
-        deleteGame, 
-        getGames , 
-        getGamesbyCategory, 
-        getNewRelease, 
-        getGame_Search,
-        getPopular, 
-        getGames_Bestseller,
-        registrarGames
-    };
+const gamebyid = async (req, res) => {
+    try {
+
+        const game = await Games.findById(
+            req.params.id
+        );
+        res.status(200).send({status:"ok", data:game});
+        
+    } catch (error) {
+        res.status(400).send({status:"Error", message:"No se encontro este juego"});
+    }
+}
+
+const editGame = async (req, res) => {
+    try {
+        const game = await Games.updateOne({
+            _id:req.params.id
+        }, {
+            $set: {
+                title: req.body.title,
+                description: req.body.description,
+                price: req.body.price,
+                image: req.body.image,
+                category: req.body.category,
+                year: new Date(req.body.year).toISOString(),
+                rank: req.body.rank,
+            }
+        });
+        res.status(200).send({status:"Ok", message:"Se edito correctamente", data:game});
+    } catch (error) {
+        res.status(500).send({status:"error", message:"Hubo un problema con la conexion", data:error});
+    }
+}
+
+const deleteGame = async (req, res) => {
+    try {
+
+        const game = await Games.deleteOne({
+            _id:req.params.id
+        });
+        res.status(200).send({status:"Ok", message:"Se elimino correctamente", data:game});
+    } catch (error) {
+        res.status(500).send({status:"error", message:"Hubo un problema con la conexion", data:error});
+    }
+}
+
+const favoritos = async (req, res) => {
+    try {
+        const games = [];
+        for (let index = 0; index < req.body.favoritos.length; index++) {
+            const game = await Games.findById({ _id:req.body.favoritos[index]});
+             games.push( game);
+        }
+        
+        res.status(200).send({status:"Ok", data:games});
+    } catch (error) {
+        res.status(500).send({status:"error", message:"Hubo un problema con la conexion", data:error});
+    }
+}
+
+const carrito = async (req, res) => {
+    try {
+        const games = [];
+        for (let index = 0; index < req.body.carrito.length; index++) {
+            const game = await Games.findById({ _id:req.body.carrito[index]});
+             games.push( game);
+        }
+        
+        res.status(200).send({status:"Ok", data:games});
+    } catch (error) {
+        res.status(500).send({status:"error", message:"Hubo un problema con la conexion", data:error});
+    }
+}
+
+module.exports = {  
+    createGame, 
+    deleteGame, 
+    getGames , 
+    getGamesbyCategory, 
+    getNewRelease, 
+    getGame_Search,
+    getPopular, 
+    getGames_Bestseller,
+    gamebyid,
+    editGame,
+    deleteGame,
+    favoritos,
+    carrito
+                }
