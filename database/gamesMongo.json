@@ -1,75 +1,60 @@
-{ 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4f0c"), 
+[{ 
+
     "title" : "MY HERO ONES JUSTICE 2", 
     "description" : "¡La lucha por la justicia es más colosal, más malvada y más exclusiva! \n Basado en la exitosa serie de anime, todos tus personajes favoritos regresan en este campo de pelea en 3D que enfrenta a héroes y villanos en la prueba definitiva para obtener justicia. \n Juega a través del anime y experimenta peleas destacadas mientras revives escenas icónicas. Reúnete después del final de MY HERO ONE’S JUSTICE y ve qué pasa con Deku y la clase 1-A en la UA. \n El elenco de MY HERO ONE’S JUSTICE está de regreso y ahora se les unen personajes recién agregados a la serie. Con 40 personajes jugables, construye el equipo de tus sueños con tu héroe o villano favorito. ¡Lucha para construir tu medidor PLUS ULTRA y lograr ciertas ocurrencias que generen combos especiales que van más allá de lo normal!", 
     "price" : 1.299, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/m/y/my-hero-ones-justice-2-ps4_4.jpg", 
     "category" : "Peleas", 
-    "year" : ISODate("2020-03-13T06:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2020-03-13T06:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0dae4828fe00172c4f0d"), 
+
     "title" : "RESIDENT EVIL 3 REMAKE", 
     "description" : "En Resident Evil 3 la miembro de los S.T.A.R.S. Jill Valentine, una de las heroínas más emblemáticas de los videojuegos, huye de una ciudad consumida por zombis y otras criaturas horribles. Construido con el RE Engine patentado por Capcom, Resident Evil 3 utiliza un juego modernizado para combinar la acción con el clásico horror de supervivencia en alta definición. Las desgarradoras experiencias de Jill en Resident Evil 3 tienen lugar en las horas de pesadilla previas y posteriores a los eventos de Resident Evil 2, arrojando nueva luz sobre la difícil situación de los habitantes de Raccoon City. Cada esperanza de escape es interrumpida por otra estrella de la franquicia de Resident Evil: la imponente criatura Némesis un arma bio orgánica, esta monstruosidad brutal pero inteligente utiliza un arsenal de armamento de alta potencia para eliminar indiscriminadamente a cualquier miembro de los S.T.A.R.S. de la ciudad con Jill como su objetivo final.", 
     "price" : 1.349, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/r/e/resident-evil-3-ps4.jpg", 
     "category" : "Suspenso", 
-    "year" : ISODate("2020-03-04T06:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:48:14.826+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:48:14.826+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2020-03-04T06:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0df54828fe00172c4f0e"), 
+
     "title" : "RESIDENT EVIL 3 REMAKE", 
     "description" : "Esta secuela de la premiada obra de Naughty Dog lanzada originalmente en 2013, promete una historia al nivel de sus personajes, de gran intensidad, desgarradora y emocional protagonizada por Ellie, aunque también hay partes jugables por Joel. Neil Druckmanne, principal guionista del estudio creador de la serie Uncharted, ya ha prometido que la historia de The Last of Us: Part II girará alrededor del odio, en contraposición a un juego original donde la temática principal era el amor.", 
     "price" : 1.259, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/t/h/the-last-of-us-cover.jpg", 
     "category" : "Accion", 
-    "year" : ISODate("2020-05-29T05:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:49:25.393+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:49:25.393+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2020-05-29T05:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f0f"), 
+
     "title" : "GHOST RECON BREAKPOINT", 
     "description" : "UN MUNDO ABIERTO EN UN MODO COOPERATIVO. Explora un diverso y misterioso mundo abierto donde encontrarás desde áridos desiertos hasta exuberantes fiordos, pasando por ciudades futuristas y cimas árticas. Cuenta con 11 biomas únicos y es hogar de Skell Technologies, haciendo de este remoto archipiélago un verdadero desafío nunca antes visto para los Ghosts. Aprovecha tu entorno y desaparece en el espeso follaje de la jungla para evadir a tus enemigos o súbete a un vehículo y lánzate a la batalla por aire, mar o tierra. La experiencia cooperativa del juego, significa que tus compañeros de escuadrón podrán entrar y salir en cualquier momento..", 
-    "price" : NumberInt(299), 
+    "price" : 299, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/700x800/9df78eab33525d08d6e5fb8d27136e95/g/h/ghost-recon-breakpoint-ps4.jpg", 
     "category" : "Accion", 
-    "year" : ISODate("2019-04-10T05:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2019-04-10T05:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f01"), 
+
     "title" : "The Legend of Zelda: Link's Awakening", 
     "description" : "Han pasado 26 años desde que The Legend of Zelda: Link's Awakening saliera a la venta para Game Boy; ahora llega a Nintendo Switch como una aventura renovada. Por culpa de una terrible tormenta, Link naufraga y acaba llegando a la costa de la misteriosa Isla Koholint. Si quiere regresar a casa, el valiente héroe deberá superar mazmorras desafiantes y enfrentarse a monstruos espeluznantes. Esta nueva versión incluye muchos de los elementos únicos que aparecían en el juego original para Game Boy: secciones de plataformas en 2D, cameos de algunos personajes que no pertenecen a la serie de The Legend of Zelda, y mucho más.", 
-    "price" : NumberInt(899), 
+    "price" : 899, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/small_image/205x253/9df78eab33525d08d6e5fb8d27136e95/t/h/the_legend_of_zelda_links_awakening.jpg", 
     "category" : "Aventura", 
-    "year" : ISODate("2019-07-20T05:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2019-07-20T05:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e7e68bfaf7ea06b000a7479"), 
+
     "title" : "LEGO The Hobbit", 
     "description" : "LEGO The Hobbit is an action adventure LEGO-themed game which takes place in the Middle-earth. It was developed by Traveller’s Tales and published in 2015 by Warner Bros. Interactive Entertainment. This is another LEGO game set in the universe known from Tolkien’s books and Peter Jackson’s movies after LEGO: Lord of the Rings. The game is available on PC (Windows, OS X)). This content was copied from https://www.g2a.com/lego-the-hobbit-steam-key-global-i10000007470007. It is protected by copyright, all rights reserved. If you want to use it, you are obligated to leave the link to the original source.", 
     "price" : 3.65, 
@@ -77,484 +62,378 @@
     "category" : "Aventura", 
     "year" : "2014-04-10", 
     "rank" : 5.0, 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-27T22:26:02.671+0000"), 
-    "__v" : NumberInt(0)
-}
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f02"), 
+
     "title" : "FIFA 20", 
     "description" : "Con el poder de Frostbite, el deporte rey cobra vida con FIFA 20 en dos contextos diferentes: el prestigio de la escena profesional y una experiencia totalmente nueva y auténtica del futbol callejero en EA SPORTS VOLTA. FIFA 20 incorpora innovaciones en el juego e incluye una plataforma sin precedentes basada en la INTELIGENCIA FUTBOLÍSTICA para un mayor realismo durante el juego, FIFA Ultimate Team, que te brinda más maneras de crear la plantilla", 
     "price" : 895.0, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/f/i/fifa-20-one_2.jpg", 
     "category" : "Deportes", 
-    "year" : ISODate("2019-07-24T05:00:00.000+0000"), 
+    "year" : "2019-07-24T05:00:00.000+0000", 
     "rank" : 4.0, 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : 0.0
-}
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f03"), 
+
     "title" : "Call of duty Modern Warfare", 
     "description" : "Prepárate para la acción. ¡Vuelve Modern Warfare! Nunca hubo tanto en juego. Ponte en la piel de mortíferos operadores de alto nivel en una trepidante saga que afectará al equilibrio del poder en el mundo. Modern Warfare®, desarrollado por Infinity Ward, el estudio que creó la saga, es una nueva y épica versión de la famosa serie", 
     "price" : 1299.0, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/c/a/call-of-duty-modern-warfare-one_1.jpg", 
     "category" : "Disparos", 
-    "year" : ISODate("2019-10-05T05:00:00.000+0000"), 
+    "year" : "2019-10-05T05:00:00.000+0000", 
     "rank" : 4.0, 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : 0.0
-}
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f04"), 
+
     "title" : "The Last of Us", 
     "description" : "Ciudades abandonadas reclamadas por la naturaleza. Una población diezmada por una plaga moderna. Los supervivientes se matan entre sí para tener comida, armas y todo aquello que pueda caer en sus manos. Joel, un superviviente brutal, y Ellie, una adolescente increíblemente lista para su edad, tendrán que trabajar juntos si desean sobrevivir a su travesía a través de los EE. UU.", 
     "price" : 344.0, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/t/h/the-last-of-us-remastered-playstation-hits.jpg", 
     "category" : "Accion", 
-    "year" : ISODate("2013-06-14T05:00:00.000+0000"), 
+    "year" : "2013-06-14T05:00:00.000+0000", 
     "rank" : 5.0, 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : 0.0
-}
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f05"), 
+
     "title" : "Gears of wars 5", 
     "description" : "El enjambre ha corrompido al ejercito robot de la coalición y está descendiendo a las ciudades humanas. Con el peligro acercándose Kait Díaz se aparta para descubrir su conexión con el enemigo y descubre el verdadero peligro para Sera - ella misma.", 
     "price" : 599.0, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/g/e/gears-5_1_1.jpg", 
     "category" : "Disparos", 
-    "year" : ISODate("2019-07-10T05:00:00.000+0000"), 
+    "year" : "2019-07-10T05:00:00.000+0000", 
     "rank" : 5.0, 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : 0.0
-}
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f06"), 
+
     "title" : "Spider Man Game Of The Year", 
     "description" : "Vive la adrenalina de la edición Juego del año de Marvel’s Spider-Man, que incluye el juego completo, además del contenido descargable completo de los arcos argumentales de Marvel’s Spider-Man: La ciudad que nunca duerme", 
-    "price" : NumberInt(1159), 
+    "price" : 1159, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/s/p/spider-man-game-of-the-year-edition.jpg", 
     "category" : "Aventura", 
-    "year" : ISODate("2018-07-07T05:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2018-07-07T05:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f07"), 
+
     "title" : "Call Of Duty Black Ops III", 
     "description" : "¡Vuelve Black Ops! Y lo hace con un combate multijugador fluido, asentado y descarnado; con el mayor modo Zombi hasta la fecha y tres aventuras llenas de no muertos; y con Apagón, donde el universo Black Ops cobra vida en una enorme experiencia de guerra total que incluye el mapa más grande de la historia de Call of Duty, el combate característico de Black Ops y personajes, ubicaciones y armas de la historia de Black Ops, todo en una experiencia de combate sin cuartel.", 
-    "price" : NumberInt(499), 
+    "price" : 499, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/c/o/cod-bo-iiii-ps4_2_1.jpg", 
     "category" : "Accion", 
-    "year" : ISODate("2015-11-06T05:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2015-11-06T05:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f08"), 
+
     "title" : "Red Dead Redemption II", 
     "description" : "Estados Unidos, 1899. El final del Salvaje Oeste está cerca y las autoridades están cazando a las últimas bandas de forajidos que quedan. Los que no se rinden o sucumben son exterminados.", 
-    "price" : NumberInt(1349), 
+    "price" : 1349, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/r/e/red-dead-redemption-ii-ps4_1.jpg", 
     "category" : "Disparos", 
-    "year" : ISODate("2018-10-26T05:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2018-10-26T05:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f09"), 
+
     "title" : "Injustuce 2 legenday", 
     "description" : "Forja tu propia experiencia DC Universe en Injustice 2: Legendary Edition. Desde la lista más grande de personajes de DC jamás ensamblados en un juego de lucha, puedes seleccionar tus personajes favoritos y personalizar su apariencia, estilo de combate, equipamiento e incluso cómo se desarrolla a lo largo del juego. Combate contra tus amigos o sumérgete en la historia cinematográfica para un jugador.", 
-    "price" : NumberInt(599), 
+    "price" : 599, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/i/n/injustice-2-legendary-edition.jpg", 
     "category" : "Peleas", 
-    "year" : ISODate("2017-05-11T05:00:00.000+0000"), 
-    "rank" : NumberInt(3), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2017-05-11T05:00:00.000+0000", 
+    "rank" : 3, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f10"), 
+
     "title" : "Minecraft", 
     "description" : "Explora mundos generados al azar y construye cosas increíbles, desde la más humilde de las casas hasta el más majestuoso de los castillos. Juega en el modo creativo con recursos ilimitados o extrae en las profundidades del mundo en el modo supervivencia, creando armas y armaduras para defenderte de las criaturas peligrosas", 
-    "price" : NumberInt(899), 
+    "price" : 899, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/m/i/minecraft-bedrock-edition.jpg", 
     "category" : "Aventura", 
-    "year" : ISODate("2009-05-17T05:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2009-05-17T05:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f11"), 
+
     "title" : "Just Dance 2020", 
     "description" : "Just Dance 2020 es el mayor juego de baile con 40 increíbles éxitos de las listas de popularidad, desde God Is a Woman de Ariana Grande hasta High Hopes de Panic! At The Disco. ¡Mantén la fiesta a todo durante horas con canciones que disfrutará toda la familia!", 
-    "price" : NumberInt(999), 
+    "price" : 999, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/j/u/just-dance-2020-ps4_2.jpg", 
     "category" : "Musical", 
-    "year" : ISODate("2019-10-05T05:00:00.000+0000"), 
-    "rank" : NumberInt(3), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2019-10-05T05:00:00.000+0000", 
+    "rank" : 3, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f12"), 
+
     "title" : "UFC 3", 
     "description" : "Únete al luchador de la portada, Conor McGregor, en un viaje para ser el mejor de todos los tiempos, dentro y fuera del octágono.", 
-    "price" : NumberInt(699), 
+    "price" : 699, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/u/f/ufc-3-ps4_1.jpg", 
     "category" : "Deportes", 
-    "year" : ISODate("2018-02-02T05:00:00.000+0000"), 
-    "rank" : NumberInt(3), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2018-02-02T05:00:00.000+0000", 
+    "rank" : 3, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f13"), 
+
     "title" : "Doom Eternal", 
     "description" : "DOOM Eternal, desarrollado por id Software, es la secuela directa del galardonado superventas DOOM, ganador del premio al Mejor juego de acción de 2016 en los Game Awards. Disfruta de la mejor combinación de velocidad y potencia mientras te abres paso entre dimensiones en un salto cualitativo del combate en primera persona en avance continuo que caracterizó al juego original.", 
-    "price" : NumberInt(1399), 
+    "price" : 1399, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/d/o/doom-eternal-one_1.jpg", 
     "category" : "Disparos", 
-    "year" : ISODate("2020-03-20T05:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2020-03-20T05:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f14"), 
+
     "title" : "God of Wars", 
     "description" : "De la mano de Santa Monica Studio y el director creativo Cory Barlog, llega un nuevo comienzo para uno de los íconos más importantes de la industria de los juegos. Kratos, que vive como un hombre lejos de la sombra de los dioses, deberá adaptarse a tierras desconocidas, amenazas inesperadas y una segunda oportunidad para oficiar de padre. Junto a su hijo Atreus se adentrarán en la salvaje tierra nórdica y lucharán para completar una misión profundamente personal.", 
-    "price" : NumberInt(399), 
+    "price" : 399, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/g/o/god-of-war-playstation-hits.jpg", 
     "category" : "Aventura", 
-    "year" : ISODate("2018-04-20T05:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2018-04-20T05:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0e554828fe00172c4f15"), 
+
     "title" : "Assassins Creed Odyssey", 
     "description" : "Escribe tu propia odisea épica y conviértete en un legendario héroe espartano en Assassin's Creed Odyssey, una aventura inspiradora en la que debes forjar tu destino y definir tu propio camino en un mundo al borde de desgarrarse. Influya cómo se desarrolla la historia a medida que experimenta un mundo rico y en constante cambio conformado por sus decisiones.", 
-    "price" : NumberInt(899), 
+    "price" : 899, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/a/s/assassins-creed-odyssey-one_5.jpg", 
     "category" : "Accion", 
-    "year" : ISODate("2018-10-05T05:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:51:01.489+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2018-10-05T05:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4b0c"), 
+
     "title" : "Resident Evil 3 Remake", 
     "description" : "En Resident Evil 3 la miembro de los S.T.A.R.S. Jill Valentine, una de las heroínas más emblemáticas de los videojuegos, huye de una ciudad consumida por zombis y otras criaturas horribles.", 
     "price" : 1.439, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/r/e/resident-evil-3-ps4.jpg", 
     "category" : "Suspenso", 
-    "year" : ISODate("2020-04-03T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2020-04-03T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4f1c"), 
+
     "title" : "Ghost Recon Breakpoint", 
     "description" : "Explora un diverso y misterioso mundo abierto donde encontrarás desde áridos desiertos hasta exuberantes fiordos, pasando por ciudades futuristas y cimas árticas. Cuenta con 11 biomas únicos y es hogar de Skell Technologies, haciendo de este remoto archipiélago un verdadero desafío nunca antes visto para los Ghosts", 
-    "price" : NumberInt(999), 
+    "price" : 999, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/g/h/ghost-recon-breakpoint-one.jpg", 
     "category" : "Disparos", 
-    "year" : ISODate("2020-10-04T06:00:00.000+0000"), 
-    "rank" : NumberInt(3), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2020-10-04T06:00:00.000+0000", 
+    "rank" : 3, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4f2c"), 
+
     "title" : "Dragon Ball Fighterz", 
     "description" : "Luego del éxito de la serie Xenoverse, es hora de presentar un nuevo juego de peleas de DRAGON BALL clásico y en dos dimensiones para las consolas de esta generación. DRAGON BALL FighterZ es posible gracias a esa característica que hace que la serie de DRAGON BALL", 
-    "price" : NumberInt(499), 
+    "price" : 499, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/d/r/dragon-ball-fighter-z-ps4.jpg", 
     "category" : "Peleas", 
-    "year" : ISODate("2018-01-26T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2018-01-26T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4f3c"), 
+
     "title" : "Pro Evolution 2019", 
     "description" : "LIGAS AUTÉNTICAS PES 2019 cuenta con licencias de nuevas ligas. ¡Muy pronto anunciaremos los detalles!", 
-    "price" : NumberInt(699), 
+    "price" : 699, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/p/e/pes-19-one.jpg", 
     "category" : "Deportes", 
-    "year" : ISODate("2018-10-28T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2018-10-28T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4f4c"), 
+
     "title" : "Mortal Kombat 11", 
     "description" : "Con las nuevas variaciones de personaje tendrás un control sin precedentes para personalizar a tus luchadores y hacerlos únicos. El nuevo motor gráfico resalta cada uno de los momentos más sangrientos para ponerte tan cerca de la pelea que casi podrás sentirla. Con un reparto de luchadores nuevos y klásicos, el modo historia cinemático continúa la épica saga iniciada hace más de 25 años.", 
-    "price" : NumberInt(999), 
+    "price" : 999, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/m/o/mortal-ps4.jpg", 
     "category" : "Peleas", 
-    "year" : ISODate("2019-04-23T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2019-04-23T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4f5c"), 
+
     "title" : "Star Wars Battlefront", 
     "description" : "Se parte del universo de Star Wars como nunca lo has visto, recorre los bosques de Endor y únete a los intensos combates entre el imperio y las fuerzas rebeldes montado en Speeder bikes, vuela por el espacio y vive en carne propia los enfrentamientos de los tie fighters y los x wings, sumérgete en las batallas más legendarias del universo y conviértete en leyenda dentro de Star Wars Battlefront.", 
-    "price" : NumberInt(687), 
+    "price" : 687, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/s/t/star-wars-battlefront_2_1.jpg", 
     "category" : "Accion", 
-    "year" : ISODate("2015-10-16T06:00:00.000+0000"), 
-    "rank" : NumberInt(3), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2015-10-16T06:00:00.000+0000", 
+    "rank" : 3, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4f6c"), 
+
     "title" : "Final Fantasy VII ", 
     "description" : "El primer título de esta saga episódica ofrece una experiencia que profundiza en el juego original con una historia exquisita, personajes inolvidables, combates épicos y un apartado gráfico impecable.", 
-    "price" : NumberInt(1439), 
+    "price" : 1439, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/f/i/final-fantasy-vii-remake_1.jpg", 
     "category" : "Estrategia", 
-    "year" : ISODate("2020-04-10T06:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2020-04-10T06:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4f7c"), 
+
     "title" : "Start Wars Jedi Fallen Order", 
     "description" : "Conoce la historia detrás del juego con la Edición Deluxe, que incluye características y contenido de la versión del director y artículos estéticos adicionales exclusivos para tu aventura.", 
     "price" : 1.399, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/s/t/star-wars-jedi-fallen-order-ps4.jpg", 
     "category" : "Accion", 
-    "year" : ISODate("2020-03-13T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2020-03-13T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4f8c"), 
+
     "title" : "Uncharted 4 A Thiefs End", 
     "description" : "Muchos años después de su última aventura, el cazafortunas jubilado, Nathan Drake, es obligado a regresar al mundo de ladrones. ", 
-    "price" : NumberInt(399), 
+    "price" : 399, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/u/n/uncharted-4-a-thiefs-end-playstation-hits.jpg", 
     "category" : "Aventura", 
-    "year" : ISODate("2016-05-10T06:00:00.000+0000"), 
-    "rank" : NumberInt(3), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2016-05-10T06:00:00.000+0000", 
+    "rank" : 3, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4f9c"), 
+
     "title" : "Battleborn", 
     "description" : "En este shooter de nueva generación desarrollado por los creadores de Borderlands, un grupo de héroes cabronazos lucha para proteger la última estrella del universo de un misterioso mal. Para defenderla, tendrás que usar personajes y armas de todo tipo: desde hombres halcón cíborgs hasta vampiros samurái u hombres montaña armados con ametralladoras.", 
-    "price" : NumberInt(100), 
+    "price" : 100, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/b/a/battleborn-ps4_1_2.jpg", 
     "category" : "Otros", 
-    "year" : ISODate("2020-05-03T06:00:00.000+0000"), 
-    "rank" : NumberInt(2), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2020-05-03T06:00:00.000+0000", 
+    "rank" : 2, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4b1c"), 
+
     "title" : "FIFA 17", 
     "description" : "FIFA 17 innova a lo largo de la cancha para entregar una experiencia futbolística equilibrada, auténtica y emocionante que te permite jugar a tu manera y competir a un nivel más alto. Tendrás confianza en la defensa, tomarás el control en la media cancha y crearás más momentos de magia que nunca antes. FIFA 17: Juega bonito.", 
-    "price" : NumberInt(345), 
+    "price" : 345, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/f/i/fifa-soccer-17-ps4.jpg", 
     "category" : "Deportes", 
-    "year" : ISODate("2020-09-27T06:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2020-09-27T06:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4b2c"), 
+
     "title" : "NBA 2K20", 
     "description" : "NBA 2K se ha convertido en mucho más que un simulador de baloncesto. 2K vuelve a definir los juegos deportivos con NBA 2K20, el título con los mejores gráficos y jugabilidad, innovadores modos de juego y una personalización y manejo de los jugadores incomparables. Además, con su cautivador Neighborhood en mundo abierto, NBA 2K20 es la plataforma donde jugadores y deportistas se darán cita para dar forma al futuro del baloncesto.", 
     "price" : 1.191, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/n/b/nba-2k20-one_1.jpg", 
     "category" : "Deportes", 
-    "year" : ISODate("2019-09-06T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2019-09-06T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4b3c"), 
+
     "title" : "Batman Arkham Knight", 
     "description" : "¡El caballero de Gótica regresa! Encarna una vez más a Batman en una estremecedora historia que cierra la saga Arkham. En esta ocasión podrás explorar entornos mucho más grandes que en cualquier otro juego de la saga, Para recorrer rápido la urbe, el hombre murciélago cuenta ahora con su veloz y bien equipado batimóvil.", 
-    "price" : NumberInt(499), 
+    "price" : 499, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/b/a/batman-arkham-knight-ps4_3.jpg", 
     "category" : "Accion", 
-    "year" : ISODate("2015-06-23T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2015-06-23T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4b4c"), 
+
     "title" : "PES 2020", 
     "description" : "En PES 2020, la opinión de los expertos se ha empleado donde ha sido posible siempre para asegurar que cada acción realizada en el terreno de juego haga frente al examen de incluso los más exigentes aficionados al fútbol.", 
-    "price" : NumberInt(899), 
+    "price" : 899, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/e/f/efootball-pes-2020_1.jpg", 
     "category" : "Deportes", 
-    "year" : ISODate("2019-09-10T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2019-09-10T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4b5c"), 
+
     "title" : "BloodBorne", 
     "description" : "Enfrenta tus pesadillas mientras buscas respuestas en la antigua ciudad de Yharnam, ahora maldecida por una enfermedad endémica que se propaga por las calles como un fuego arrasador. El peligro, la muerte y la locura merodean en cada esquina de este mundo oscuro y espantoso, y debes descubrir sus secretos más oscuros para poder sobrevivir", 
-    "price" : NumberInt(499), 
+    "price" : 499, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/b/l/bloodborne-playstation-hits.jpg", 
     "category" : "Estrategia", 
-    "year" : ISODate("2015-03-24T06:00:00.000+0000"), 
-    "rank" : NumberInt(3), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2015-03-24T06:00:00.000+0000", 
+    "rank" : 3, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4b6c"), 
+
     "title" : "Horizon Zero Dawn", 
     "description" : "Conviértete en la habilidosa cazadora Aloy y explora un mundo exuberante habitado por misteriosas criaturas mecanizadas, en un nuevo y emocionante juego de rol, acción y mundo abierto, exclusivamente para la consola PlayStation 4.", 
-    "price" : NumberInt(599), 
+    "price" : 599, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/h/o/horizon-zero-dawn-edicion-completa-playstation-hits.jpg", 
     "category" : "Aventura", 
-    "year" : ISODate("2017-02-28T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2017-02-28T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4b7c"), 
+
     "title" : "The Division 2", 
     "description" : "Washington D. C. está a punto de colapsar. La anarquía y la inestabilidad amenazan a nuestra sociedad, y los rumores de un golpe de estado en el Capitolio solo amplifican el caos. A todos los agentes de la División activos se les necesita con desesperación para salvar la ciudad antes de que sea demasiado tard", 
-    "price" : NumberInt(399), 
+    "price" : 399, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/t/h/the-division-2-one_1.jpg", 
     "category" : "Disparos", 
-    "year" : ISODate("2019-03-12T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2019-03-12T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4b8c"), 
+
     "title" : "The Witcher 3 Wild Hunt", 
     "description" : "Galardonado con más de 250 premios al juego del año, The Witcher 3: Wild Hunt es una aventura de mundo abierto basada en la narrativa y ambientada en un oscuro universo de fantasía. Eres Geralt de Rivia, cazador de monstruos a sueldo.", 
     "price" : 1.399, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/t/h/the-witcher-3-switch-2.jpg", 
     "category" : "Estrategia", 
-    "year" : ISODate("2015-05-19T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2015-05-19T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4b9c"), 
+
     "title" : "Destiny 2", 
     "description" : "La última ciudad segura de la humanidad ha caído ante una fuerza invasora abrumadora dirigida por Ghaul, el imponente comandante de la brutal Legión Roja. Ha despojado de su poder a los guardianes y obligado a huir a los supervivientes.", 
-    "price" : NumberInt(499), 
+    "price" : 499, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/d/e/destiny-2_3.jpg", 
     "category" : "Disparos", 
-    "year" : ISODate("2017-09-06T06:00:00.000+0000"), 
-    "rank" : NumberInt(4), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2017-09-06T06:00:00.000+0000", 
+    "rank" : 4, 
+    "sales" : 0
+},
 { 
-    "_id" : ObjectId("5e6c0cd34828fe00172c4c1c"), 
     "title" : "Watch Dogs 2", 
     "description" : "Watch Dogs® 2 es el resultado de más de dos años de intenso desarrollo por parte del equipo creativo original responsable de la marca Watch Dogs. Los jugadores entrarán a un masivo y dinámico ambiente de mundo abierto situado en el área de la bahía de San Francisco, ciudad que recientemente adoptó el ctOS 2.0,", 
-    "price" : NumberInt(599), 
+    "price" : 599, 
     "image" : "https://gameplanet-53f8.kxcdn.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/w/a/watchdogs-2-one.jpg", 
     "category" : "Accion", 
-    "year" : ISODate("2020-11-15T06:00:00.000+0000"), 
-    "rank" : NumberInt(5), 
-    "sales" : NumberInt(0), 
-    "createdAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "updatedAt" : ISODate("2020-03-13T22:44:35.761+0000"), 
-    "__v" : NumberInt(0)
-}
+    "year" : "2020-11-15T06:00:00.000+0000", 
+    "rank" : 5, 
+    "sales" : 0
+}]

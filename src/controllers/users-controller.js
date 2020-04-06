@@ -49,8 +49,8 @@ const createUser = async (req, res) => {
             data,
             role
         });
-        //MySQL
-        await MySQL.query('INSERT INTO Users (`id_mongo`) VALUES ("' + user._id + '")')
+        
+        
 
         res.send({status:'OK', message: 'Usuario creado'}) 
     } catch (error) {

@@ -4,7 +4,7 @@ const MySQL = require ('../sql/database');
 const createGame = async (req, res) => {
     console.log(req.body);
     try {
-        const {title, price, image, description, rank, year,category} = req.body;
+        const {title, price, image, description, rank, year,category, sales} = req.body;
 
         //Mongo
         const game = await Games.create({
@@ -14,10 +14,10 @@ const createGame = async (req, res) => {
             image,
             category,
             year,
-            rank
+            rank,
+            sales
         });
-        //MySQL
-        await MySQL.query('INSERT INTO Games (`id_mongo`) VALUES ("' + game._id + '")')
+        
         
         res.status(200).send({statis:"ok", message:"Se registro correctamente" ,data:game})
     } catch (e) {
@@ -166,7 +166,6 @@ module.exports = {  createGame,
                     getGame_Search,
                     getPopular, 
                     getGames_Bestseller,
-                    registrarGames,
                     gamebyid,
                     editGame,
                     deleteGame};

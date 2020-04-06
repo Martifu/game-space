@@ -2,49 +2,66 @@ const MySQL = require ('../sql/database');
 //const Games = require('../mongo/models/games-model')
 //const Users = require('../mongo/models/users-model');
 
-const createOrder = async (req, res) => {
+const create = (req, res) => {
+    
     try {
-        console.log(req.body);
-        //MySQL
-        const {Users_id, total} = req.body;
         
+        const data = createOrder(req.body, function(err, response){
+            if(err){
+                console.log('createOrder error', err.sqlMessage)
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+            }
+
+            createOrderDetails();
+
+            res.status(200).send({data:response.insertId});
+        });
+        
+    } catch (e) {
+        console.log('createOrder error', e)
+        res.status(500).send({status:'ERROR',data:e.message});
+    }
+};
+
+async function createOrder (data, callback){
+    //MySQL
+    const {total, customer_name, customer_lname, adress, city, state, country, phone, mail, status, user_id} = data;
 
         const order = {
-            Users_id, 
-            total
+            total, 
+            customer_name, 
+            customer_lname, 
+            adress, 
+            city, 
+            state, 
+            country, 
+            phone, 
+            mail, 
+            status, 
+            user_id
         };
+    
+    //console.log(response);
+    await MySQL.query('INSERT INTO Orders set ? ;', [order], async function (err, result, fields) { 
+        if (err) { 
+         // handle error
+         callback(await err, null);
+         
+        }else{ 
+         // Your row is inserted you can view 
+         callback(null,  await result);
+        }
+        
+        
+    });
+    
+}
 
-        var newOrderId = 0;
-        await MySQL.query('INSERT INTO Orders set ?', [order], function(err, result, fields) { 
-            if (err) { 
-             // handle error 
-             console.log(err);
-            }else{ 
-             // Your row is inserted you can view 
-             var newOrderId = result.insertId; 
-             
-            }});
-            
+const createOrderDetails = async (data, res) => {
+    
+    console.log(data);
         
-        //res.status(200).send({data:order})
-    } catch (e) {
-        console.log('createOrder error', e)
-        res.status(500).send({status:'ERROR',data:e.message})
-    }
-};
-
-const createOrderDetails = async (req, res) => {
-    try {
-        console.log(req.body);
-        await createOrder(req);
-        
-        
-        res.status(200).send({data:req.body})
-    } catch (e) {
-        console.log('createOrder error', e)
-        res.status(500).send({status:'ERROR',data:e.message})
-    }
 };
 
 
-module.exports = {createOrderDetails};
+module.exports = {create};
