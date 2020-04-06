@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 var mongoose = require('mongoose');
 const path = require('path');
 const router = express.Router();
+var mysql = require('promise-mysql');
 
 
 
@@ -30,7 +31,7 @@ routesv1(app);
 
 const PORT = process.env.PORT || 4000;
 
-
+mysql.createPool()
 mongoose.connect('mongodb+srv://martin:game-space97@game-space-nnfa0.gcp.mongodb.net/game-space', {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -43,3 +44,4 @@ mongoose.connect('mongodb+srv://martin:game-space97@game-space-nnfa0.gcp.mongodb
 app.listen(PORT, function() {
     console.log('Corriendo en puerto 4000');
 });
+

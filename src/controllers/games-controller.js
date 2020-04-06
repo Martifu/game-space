@@ -1,4 +1,5 @@
 const Games = require('../mongo/models/games-model')
+const MySQL = require ('../sql/database');
 
 const createGame = async (req, res) => {
     try {
@@ -26,6 +27,11 @@ const deleteGame = async  (req, res) => {
 };
 
 const getGames = async (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*');
+
+    // authorized headers for preflight requests
+    // https://developer.mozilla.org/en-US/docs/Glossary/preflight_request
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     try {
         const games = await Games.find();
         res.send({status:'OK',data:games})
@@ -118,4 +124,53 @@ module.exports = {
         getGame_Search, 
         getPopular, 
         getGames_Bestseller
+    };
+
+const registrarGames = async (req, res) => {
+    console.log(req);
+
+    try {
+
+        //Mongo
+        const game = await new Games({
+          title: req.body.title,
+          description: req.body.description,
+          price: req.body.price,
+          image: req.body.image,
+          category: req.body.category,
+          year: new Date(req.body.year).toISOString(),
+          rank: req.body.rank,
+          sales: 0,
+          createdAt: new Date().toISOString(),
+          updateAt: new Date().toISOString(),
+          __v: 0
+        });
+        game.save( (error ) => {
+            if (error) {
+                return error;
+            }
+            res.status(200).send({status:"ok", message:"Se registro de manera correcta"})
+        })
+
+        //MySQL
+        //await MySQL.query()
+
+
+    } catch (error) {
+        console.log("registrar", error);
+        res.status(500).send({status:"error", data:error.message})
+    }
+
+}
+
+module.exports = {
+        createGame, 
+        deleteGame, 
+        getGames , 
+        getGamesbyCategory, 
+        getNewRelease, 
+        getGame_Search,
+        getPopular, 
+        getGames_Bestseller,
+        registrarGames
     };
