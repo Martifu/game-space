@@ -5,7 +5,7 @@ const router = express.Router();
 
 //CRUD juegos
 router.post('/create', gamesController.createGame);
-router.get('/delete/:id', gamesController.deleteGame);
+router.post('/delete/:id', gamesController.deleteGame);
 router.get('/gamebyid/:id', gamesController.gamebyid);
 router.post('/editgame/:id', gamesController.editGame);
 //Aqui termina el CRUD
