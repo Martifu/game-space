@@ -112,6 +112,11 @@ const getGames_Bestseller = async (req, res) => {
     }
 };
 
+
+const registrarGames = async (req, res) => {
+    console.log(req);
+}
+
 const gamebyid = async (req, res) => {
     try {
 
@@ -158,14 +163,46 @@ const deleteGame = async (req, res) => {
     }
 }
 
-module.exports = {  createGame, 
-                    deleteGame, 
-                    getGames , 
-                    getGamesbyCategory, 
-                    getNewRelease, 
-                    getGame_Search,
-                    getPopular, 
-                    getGames_Bestseller,
-                    gamebyid,
-                    editGame,
-                    deleteGame};
+const favoritos = async (req, res) => {
+    try {
+        const games = [];
+        for (let index = 0; index < req.body.favoritos.length; index++) {
+            const game = await Games.findById({ _id:req.body.favoritos[index]});
+             games.push( game);
+        }
+        
+        res.status(200).send({status:"Ok", data:games});
+    } catch (error) {
+        res.status(500).send({status:"error", message:"Hubo un problema con la conexion", data:error});
+    }
+}
+
+const carrito = async (req, res) => {
+    try {
+        const games = [];
+        for (let index = 0; index < req.body.carrito.length; index++) {
+            const game = await Games.findById({ _id:req.body.carrito[index]});
+             games.push( game);
+        }
+        
+        res.status(200).send({status:"Ok", data:games});
+    } catch (error) {
+        res.status(500).send({status:"error", message:"Hubo un problema con la conexion", data:error});
+    }
+}
+
+module.exports = {  
+    createGame, 
+    deleteGame, 
+    getGames , 
+    getGamesbyCategory, 
+    getNewRelease, 
+    getGame_Search,
+    getPopular, 
+    getGames_Bestseller,
+    gamebyid,
+    editGame,
+    deleteGame,
+    favoritos,
+    carrito
+                }

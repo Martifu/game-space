@@ -17,5 +17,7 @@ router.get('/new-release', gamesController.getNewRelease);
 router.get('/populares',gamesController.getPopular);
 router.get('/search/:data', gamesController.getGame_Search);
 router.get('/bestseller', gamesController.getGames_Bestseller);
+router.post('/favoritos', gamesController.favoritos);
+router.post('/carrito', gamesController.carrito);
 
 module.exports = router;
