@@ -33,7 +33,7 @@ const login = async (req,res)=>{
             res.send({status:'USER NOT FOUND'});
         }
     } catch (e) {
-        res.status(500).send({status:'ERROR', message: error.message})
+        res.status(500).send({status:'ERROR', message: e.message})
     }
 };
 
