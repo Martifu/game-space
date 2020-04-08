@@ -23,17 +23,15 @@ const login = async (req,res)=>{
                 }
             });    
             } else {
-                res.status(403).send({status:'Invalid Password', message: ''});
-                res.send({status:'Invalid Password'});
+                res.status(403).send({status:'error', message: 'Invalid password'});
             }
             
         } else {
             console.log('not found')
-            res.status(404).send({status:'USER NOT FOUND', message: ''});
-            res.send({status:'USER NOT FOUND'});
+            res.status(404).send({status:'error', message: 'user not found'});
         }
     } catch (e) {
-        res.status(500).send({status:'ERROR', message: e.message})
+        res.status(500).send({status:'error', message: e.message})
     }
 };
 
