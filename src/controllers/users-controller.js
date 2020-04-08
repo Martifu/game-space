@@ -85,10 +85,10 @@ const updateUser = async (req, res) => {
 
     try {
         const { data,  role} = req.body; 
-        await Users.findByIdAndUpdate(req.sessionData.userId,{
+        await Users.updateOne({_id:req.sessionData.userId}, { $set:{
             data, 
             role
-        });
+        }});
         res.send({status:'OK', message: 'Usuario actualizado'})
     } catch (error) {
 
