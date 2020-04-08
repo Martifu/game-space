@@ -63,8 +63,17 @@ const createUser = async (req, res) => {
     
 };
 
-const deleteUser = (req, res) => {
-    res.send({status:'OK', message: 'Usuario borrado'})
+const deleteUser = async (req, res) => {
+    try {
+        const user = await Users.deleteOne({
+            _id:req.params.id
+        });
+
+        res.send({status:'OK', message: 'Usuario borrado', data:user})
+    } catch (error) {
+        res.send({status:'error', message:'Hubo un error', error:error})
+
+    }
 };
 
 const getUsers = async (req, res) => {
@@ -80,7 +89,7 @@ const getUsers = async (req, res) => {
 const updateUser = async (req, res) => {
 
     try {
-        const { data,  role, id} = req.body; 
+        const { data, role, id} = req.body; 
         const user = await Users.updateOne({_id:id}, { $set:{
             data, 
             role
