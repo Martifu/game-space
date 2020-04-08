@@ -75,21 +75,17 @@ const getUsers = async (req, res) => {
     } catch (error) {
         res.status(500).send({status:"Error", message:"Error con los usuarios", error:error});
     }
-
-
-
-    res.send({status:'OK', message: []})
 };
 
 const updateUser = async (req, res) => {
 
     try {
         const { data,  role} = req.body; 
-        await Users.updateOne({_id:req.sessionData.userId}, { $set:{
+        const user = await Users.updateOne({_id:req.sessionData.userId}, { $set:{
             data, 
             role
         }});
-        res.send({status:'OK', message: 'Usuario actualizado'})
+        res.send({status:'OK', message: 'Usuario actualizado', data:user})
     } catch (error) {
 
         if (error.code && error.code === 11000) {
