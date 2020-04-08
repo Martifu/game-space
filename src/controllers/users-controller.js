@@ -80,8 +80,8 @@ const getUsers = async (req, res) => {
 const updateUser = async (req, res) => {
 
     try {
-        const { data,  role} = req.body; 
-        const user = await Users.updateOne({_id:req.sessionData.userId}, { $set:{
+        const { data,  role, id} = req.body; 
+        const user = await Users.updateOne({_id:id}, { $set:{
             data, 
             role
         }});

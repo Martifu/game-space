@@ -12,8 +12,6 @@ const isValidHostname = (req,res,next) =>{
 const isAuth = (req,res,next) =>{
     try {
         const {token} = req.headers;
-        console.log(req.headers);
-        console.log(token);
         if (token) {
             const data = jwt.verify(token, process.env.JWT_SECRET);
             req.sessionData = {userId:data.userId}
