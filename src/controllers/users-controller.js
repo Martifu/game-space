@@ -117,4 +117,27 @@ const userById = async (req, res) => {
     }
 }
 
-module.exports = { createUser, deleteUser, getUsers, updateUser, login, userById };
+//-----------------------------Estadisticas
+
+const getBestUser = (req, res) => {
+        
+    try {
+        
+        MySQL.query('SELECT customer_name, customer_lname, count(customer_name) as "total" FROM atiadmin_game_space.Orders group by customer_name order by total desc limit 1;', async function (err, result, fields) { 
+            if (err) {
+            console.log(err.sqlMessage);
+            res.status(500).send({status:'ERROR',data:err.sqlMessage});
+            }
+            console.log(result);
+            
+            res.status(200).send({status:"Ok", data:result});
+            
+        });
+        
+    } catch (e) {
+        console.log('createOrder error', e)
+        res.status(500).send({status:'ERROR',data:e.message});
+    }
+};
+
+module.exports = { createUser, deleteUser, getUsers, updateUser, login, userById, getBestUser};

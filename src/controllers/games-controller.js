@@ -191,6 +191,63 @@ const carrito = async (req, res) => {
     }
 }
 
+//---------------------------------------------Estadisticas
+
+
+const getGameBestSeler = (req, res) => {
+        
+    try {
+        
+        MySQL.query('SELECT game_id, sum(quantity) as "total" FROM atiadmin_game_space.Orders_details group by game_id order by total desc limit 1;', async function (err, result, fields) { 
+            if (err) {
+            console.log(err.sqlMessage);
+            res.status(500).send({status:'ERROR',data:err.sqlMessage});
+            }
+            console.log(result[0]["game_id"]);
+
+            const games = Games.findById(result[0]["game_id"], function(err, result){
+                if(err){
+                    res.status(500).send({status:'ERROR',data:err});
+                }
+                console.log(result);
+                res.status(200).send({status:"Ok", data:result});
+            });
+            
+        });
+        
+    } catch (e) {
+        console.log('createOrder error', e)
+        res.status(500).send({status:'ERROR',data:e.message});
+    }
+};
+
+const getGamesLeastSeler = (req, res) => {
+        
+    try {
+        
+        MySQL.query('SELECT game_id, sum(quantity) as "total" FROM atiadmin_game_space.Orders_details group by game_id order by total asc limit 1;', async function (err, result, fields) { 
+            if (err) {
+            console.log(err.sqlMessage);
+            res.status(500).send({status:'ERROR',data:err.sqlMessage});
+            }
+            console.log(result[0]["game_id"]);
+
+            const games = Games.findById(result[0]["game_id"], function(err, result){
+                if(err){
+                    res.status(500).send({status:'ERROR',data:err});
+                }
+                console.log(result);
+                res.status(200).send({status:"Ok", data:result});
+            });
+            
+        });
+        
+    } catch (e) {
+        console.log('createOrder error', e)
+        res.status(500).send({status:'ERROR',data:e.message});
+    }
+};
+
 module.exports = {  
     createGame, 
     deleteGame, 
@@ -204,5 +261,7 @@ module.exports = {
     editGame,
     deleteGame,
     favoritos,
-    carrito
+    carrito,
+    getGameBestSeler,
+    getGamesLeastSeler
                 }
