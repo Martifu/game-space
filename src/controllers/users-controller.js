@@ -23,17 +23,15 @@ const login = async (req,res)=>{
                 }
             });    
             } else {
-                res.status(403).send({status:'Invalid Password', message: ''});
-                res.send({status:'Invalid Password'});
+                res.status(403).send({status:'error', message: 'Invalid password'});
             }
             
         } else {
             console.log('not found')
-            res.status(404).send({status:'USER NOT FOUND', message: ''});
-            res.send({status:'USER NOT FOUND'});
+            res.status(404).send({status:'error', message: 'user not found'});
         }
     } catch (e) {
-        res.status(500).send({status:'ERROR', message: error.message})
+        res.status(500).send({status:'error', message: e.message})
     }
 };
 
@@ -65,8 +63,17 @@ const createUser = async (req, res) => {
     
 };
 
-const deleteUser = (req, res) => {
-    res.send({status:'OK', message: 'Usuario borrado'})
+const deleteUser = async (req, res) => {
+    try {
+        const user = await Users.deleteOne({
+            _id:req.params.id
+        });
+
+        res.send({status:'OK', message: 'Usuario borrado', data:user})
+    } catch (error) {
+        res.send({status:'error', message:'Hubo un error', error:error})
+
+    }
 };
 
 const getUsers = async (req, res) => {
@@ -77,21 +84,17 @@ const getUsers = async (req, res) => {
     } catch (error) {
         res.status(500).send({status:"Error", message:"Error con los usuarios", error:error});
     }
-
-
-
-    res.send({status:'OK', message: []})
 };
 
 const updateUser = async (req, res) => {
 
     try {
-        const { data,  role} = req.body; 
-        await Users.findByIdAndUpdate(req.sessionData.userId,{
+        const { data, role, id} = req.body; 
+        const user = await Users.updateOne({_id:id}, { $set:{
             data, 
             role
-        });
-        res.send({status:'OK', message: 'Usuario actualizado'})
+        }});
+        res.send({status:'OK', message: 'Usuario actualizado', data:user})
     } catch (error) {
 
         if (error.code && error.code === 11000) {
