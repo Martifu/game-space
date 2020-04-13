@@ -181,8 +181,30 @@
         }
     };
 
+    const getProfitsLastFiveMonths = (req, res) => {
+        
+        try {
+            
+            MySQL.query('SELECT monthname(created_at) as "Mes" , count(created_at) as "cantidad", sum(total) as "ganancias" FROM atiadmin_game_space.Orders group by month(created_at) order by created_at limit 5;', async function (err, result, fields) { 
+                if (err) {
+                console.log(err.sqlMessage);
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                }
+                console.log(result);
+                
+                res.status(200).send({status:"Ok", data:result});
+                
+            });
+            
+        } catch (e) {
+            console.log('createOrder error', e)
+            res.status(500).send({status:'ERROR',data:e.message});
+        }
+    };
+
     module.exports = {create,
         getSalesMonth,
         getProfits,
         getProfitsMonth,
-        getOrdersPerMonth};
+        getOrdersPerMonth,
+        getProfitsLastFiveMonths};

@@ -12,6 +12,7 @@ router.get('/getSalesMonth', ordersController.getSalesMonth);
 router.get('/getProfits', ordersController.getProfits);
 router.get('/getProfitsMonth', ordersController.getProfitsMonth);
 router.get('/getOrdersPerMonth', ordersController.getOrdersPerMonth);
+router.get('/getProfitsLastFiveMonths', ordersController.getProfitsLastFiveMonths);
 router.get('/getBestUser', usersController.getBestUser);
 
 module.exports = router;
