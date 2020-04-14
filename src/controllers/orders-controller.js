@@ -1,5 +1,5 @@
     const MySQL = require ('../sql/database');
-    //const Games = require('../mongo/models/games-model')
+    const Games = require('../mongo/models/games-model')
     //const Users = require('../mongo/models/users-model');
 
     const create = (req, res) => {
