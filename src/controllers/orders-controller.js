@@ -205,7 +205,7 @@
   const getTot=  async function (res,req) {
         try {
             const game_id = req.body;
-            const games = await Games.find(game_id);
+            const games = await Games.find({game_id});
             res.status(200).send({status: "Ok", data: games});
 
         } catch (error) {
