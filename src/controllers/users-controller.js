@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const Users = require('../mongo/models/users-model');
 const MySQL = require ('../sql/database');
-
+const Games = require('../mongo/models/games-model');
 const  expiresIn = 630*10;
 
 const login = async (req,res)=>{
