@@ -202,9 +202,21 @@
         }
     };
 
+    async function getTot(game_id) {
+        try {
+            const games = await Games.find(game_id);
+            res.status(200).send({status: "Ok", data: games});
+
+        } catch (error) {
+            res.status(500).send({status: "Error", message: "Error con los usuarios", error: error});
+        }
+    };
+
+
     module.exports = {create,
         getSalesMonth,
         getProfits,
         getProfitsMonth,
         getOrdersPerMonth,
-        getProfitsLastFiveMonths};
+        getProfitsLastFiveMonths,
+        getTot};
