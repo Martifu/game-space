@@ -14,6 +14,6 @@ router.get('/getProfitsMonth', ordersController.getProfitsMonth);
 router.get('/getOrdersPerMonth', ordersController.getOrdersPerMonth);
 router.get('/getProfitsLastFiveMonths', ordersController.getProfitsLastFiveMonths);
 router.get('/getBestUser', usersController.getBestUser);
-
+router.get('/getTotal', ordersController.getTot);
 
 module.exports = router;
