@@ -11,7 +11,7 @@ router.post('/update', isAuth, usersController.updateUser);
 router.post('/delete/:id', usersController.deleteUser);
 router.get('/get-users', usersController.getUsers);
 router.get('/getusersById/:id', usersController.userById);
-router.get('/get', usersController.gett);
+router.post('/get', usersController.gett);
 
 
 module.exports = router;
