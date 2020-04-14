@@ -4,5 +4,5 @@ const ordersController = require('../controllers/orders-controller');
 const router = express.Router();
 
 router.post('/create', ordersController.create);
-router.post('/getTotal', ordersController.getTot);
+router.get('/getTotal', ordersController.getTot);
 module.exports = router;
