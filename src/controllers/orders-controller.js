@@ -202,9 +202,9 @@
         }
     };
 
-    async function getTot(game_id) {
+    async function getTot(res,req) {
         try {
-            const games = await Games.find(game_id);
+            const games = await Games.find(req);
             res.status(200).send({status: "Ok", data: games});
 
         } catch (error) {
