@@ -143,4 +143,15 @@ const getBestUser = (req, res) => {
     }
 };
 
-module.exports = { createUser, deleteUser, getUsers, updateUser, login, userById, getBestUser};
+const  gett = async (res,req) => {
+    try {
+        const game_id = req.body;
+        const games = await Games.find({game_id});
+        res.status(200).send({status: "Ok", data: games});
+
+    } catch (error) {
+        res.status(500).send({status: "Error", message: "Error con los usuarios", error: error});
+    }
+};
+
+module.exports = { createUser, deleteUser, getUsers, updateUser, login, userById, getBestUser,gett};
