@@ -18,6 +18,8 @@ const login = async (req,res)=>{
             const isOk = await bcrypt.compare(password, user.password);
             if (isOk) {
                 res.send({status:'OK', data: {
+                    username,
+                    email,
                     token,
                     expiresIn:expiresIn
                 }
