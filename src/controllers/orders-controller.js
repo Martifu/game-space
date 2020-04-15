@@ -202,7 +202,7 @@
         }
     };
 
-  const getTot=  async function (res,req) {
+  const getTot=  async function (req,res) {
         try {
             const game_id = req.body;
             const games = await Games.find({game_id});
