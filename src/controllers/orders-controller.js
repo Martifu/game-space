@@ -204,9 +204,33 @@
 
   const getTot=  async function (req,res) {
         try {
-            const game_id = req.body;
-            const games = await Games.find({game_id});
-            res.status(200).send({status: "Ok", data: games});
+            const game_id =  req.body['ids'];
+            var game = {};
+            var juegos = {};
+            var orderDetails = [];
+            var total = 0 ;
+            var unidades =req.body['ids'].length;
+
+            for (let index = 0; index < req.body['ids'].length; index++) {
+                
+                game = await Games.find({_id:req.body['ids'][index]})
+                total = total + game[0].price;
+                juegos['total'] = total;
+                orderDetails.push(
+                    {
+                        "game_id":game[0]._id,
+                        "quantity":1,
+                        "discount":0
+                    }
+                );
+            }
+            
+            juegos['subtotal'] = total;
+            juegos['unidades'] = unidades;
+            juegos['orderDetails'] = orderDetails;
+
+            const games = await Games.find({_id:game_id});
+            res.status(200).send({status: "Ok", data: juegos});
 
         } catch (error) {
             res.status(500).send({status: "Error", message: "Error con los usuarios", error: error});
