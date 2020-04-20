@@ -20,6 +20,7 @@ const login = async (req,res)=>{
                 res.send({status:'OK', data: {
                     username:user.username,
                     email:user.email,
+                    userId:user.userId,
                     token,
                     expiresIn:expiresIn
                 }
