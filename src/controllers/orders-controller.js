@@ -93,6 +93,29 @@
 
     };
 
+    const getOrders = (req, res) => {
+            
+        try {
+            
+            MySQL.query('SELECT * FROM atiadmin_game_space.Orders;', async function (err, result, fields) { 
+                if (err) {
+                console.log(err.sqlMessage);
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                }
+                console.log(result);
+                
+                res.status(200).send({status:"Ok", data:result});
+                
+            });
+            
+        } catch (e) {
+            console.log('getOrders error', e)
+            res.status(500).send({status:'ERROR',data:e.message});
+        }
+    };
+
+
+
 
 //--------------------------------------------------- Estadisticas
 
@@ -113,7 +136,7 @@
             });
             
         } catch (e) {
-            console.log('createOrder error', e)
+            console.log('getSalesMonth error', e)
             res.status(500).send({status:'ERROR',data:e.message});
         }
     };
@@ -134,7 +157,7 @@
             });
             
         } catch (e) {
-            console.log('createOrder error', e)
+            console.log('getProfits error', e)
             res.status(500).send({status:'ERROR',data:e.message});
         }
     };
@@ -155,7 +178,7 @@
             });
             
         } catch (e) {
-            console.log('createOrder error', e)
+            console.log('getProfitsMonth error', e)
             res.status(500).send({status:'ERROR',data:e.message});
         }
     };
@@ -176,7 +199,7 @@
             });
             
         } catch (e) {
-            console.log('createOrder error', e)
+            console.log('getOrdersPerMonth error', e)
             res.status(500).send({status:'ERROR',data:e.message});
         }
     };
@@ -197,12 +220,13 @@
             });
             
         } catch (e) {
-            console.log('createOrder error', e)
+            console.log('getProfitsLastFiveMonths error', e)
             res.status(500).send({status:'ERROR',data:e.message});
         }
     };
 
     module.exports = {create,
+        getOrders,
         getSalesMonth,
         getProfits,
         getProfitsMonth,
