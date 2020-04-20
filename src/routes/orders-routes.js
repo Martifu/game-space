@@ -5,5 +5,5 @@ const router = express.Router();
 
 router.post('/create', ordersController.create);
 router.post('/getOrders', ordersController.getOrders);
-
+router.post('/getTotal', ordersController.getTot);
 module.exports = router;
