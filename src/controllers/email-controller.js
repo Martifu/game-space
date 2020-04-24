@@ -3,11 +3,11 @@ const confmensaje = require('../configemail/configMensaje');
 const sendMensaje = async (req, res) => {
 
     try {
-        
-        if (confmensaje(req.body)) {
+        let resp = confmensaje(req.body)
+        if (resp) {
         res.status(200).send({Status:"Ok", message:"Correo enviado"});
 
-        }else {
+        } else {
         res.status(404).send({Status:"error", message:"Error en el envio del correo"});
 
         }
