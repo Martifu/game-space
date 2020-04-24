@@ -123,13 +123,13 @@
                 console.log(err.sqlMessage);
                 res.status(500).send({status:'ERROR',data:err.sqlMessage});
                 }
-                console.log(result[0]['game_id']);
-                const data = [];
-                const i = 0;
-                while (i < result.length) {
-                    console.log(i);
+                
+                const data = []; 
+                var i = 0;
+                while  (i < result.length) {
+                    
                     const order = result[i];
-                    console.log(order);
+                    
                     try {
 
                         const game = await Games.findById(
@@ -137,7 +137,7 @@
                         );
                         order['game_id'] = game;
 
-                        data[i] = [order];
+                        data[i] = order;
                         
                     } catch (error) {
                         console.log('error');
