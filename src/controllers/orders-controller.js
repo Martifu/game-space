@@ -133,6 +133,29 @@
     };
 
 
+    const getOneOrder = (req, res) => {
+        const {id} = req.body
+        try {
+            
+            MySQL.query('SELECT * FROM atiadmin_game_space.Orders where id = "'+ id+'"', async function (err, result, fields) { 
+                if (err) {
+                console.log(err.sqlMessage);
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                }
+                console.log(result);
+                
+                res.status(200).send({status:"Ok", data:result});
+                
+            });
+            
+        } catch (e) {
+            console.log('getSalesMonth error', e)
+            res.status(500).send({status:'ERROR',data:e.message});
+        }
+
+    }
+
+
 
 
 //--------------------------------------------------- Estadisticas
@@ -282,6 +305,7 @@
     module.exports = {create,
         getOrders,
         updateOrder,
+        getOneOrder,
         getSalesMonth,
         getProfits,
         getProfitsMonth,
