@@ -134,11 +134,10 @@
 
 
     const getOneOrder = (req, res) => {
-        console.log(req);
-        const {id} = req.params
+        
         try {
             
-            MySQL.query('SELECT * FROM atiadmin_game_space.Orders where id = "'+ id+'"', async function (err, result, fields) { 
+            MySQL.query('SELECT * FROM atiadmin_game_space.Orders where id = "'+ req.params.id+'"', async function (err, result, fields) { 
                 if (err) {
                 console.log(err.sqlMessage);
                 res.status(500).send({status:'ERROR',data:err.sqlMessage});
