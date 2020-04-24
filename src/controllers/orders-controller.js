@@ -125,16 +125,28 @@
                 }
                 console.log(result[0]['game_id']);
                 const data = [];
-
+                const i = 0;
                 while (i < result.length) {
-                    const detail = result[i];
-                    const game = await Games.findById(
-                        result[0]['game_id']
-                    );
-                    data = []
+                    console.log(i);
+                    const order = result[i];
+                    console.log(order);
+                    try {
+
+                        const game = await Games.findById(
+                            result[i]['game_id']
+                        );
+                        order['game_id'] = game;
+
+                        data[i] = [order];
+                        
+                    } catch (error) {
+                        console.log('error');
+                    }
+
+                    
                     i++;
                 }
-                res.status(200).send({status:"Ok", data:result});
+                res.status(200).send({status:"Ok", data:data});
                 
             });
             
@@ -333,9 +345,9 @@
 
     module.exports = {create,
         getOrders,
+        getOrdersDetails,
         updateOrder,
         getOneOrder,
-        getOrdersDetails,
         getSalesMonth,
         getProfits,
         getProfitsMonth,

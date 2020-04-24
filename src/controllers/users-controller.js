@@ -20,6 +20,7 @@ const login = async (req,res)=>{
                 res.send({status:'OK', data: {
                     username:user.username,
                     email:user.email,
+                    userId:user.userId,
                     token,
                     expiresIn:expiresIn
                 }
@@ -117,12 +118,21 @@ const userById = async (req, res) => {
         }
         
     } catch (error) {
-        res.status(200).send({status:"OK", error:error});
+        res.status(404).send({status:"error", error:error});
         
     }
 }
 
 //-----------------------------Estadisticas
+
+const getCountUser = async (req, res) => {
+    try {
+        const users = await Users.where({'role':'user'}).count();
+        res.status(200).send({status:"Ok", data:users})
+    } catch(error) {
+        res.status(404).send({status:"Error", error:error})
+    }
+}
 
 const getBestUser = (req, res) => {
         
@@ -145,4 +155,4 @@ const getBestUser = (req, res) => {
     }
 };
 
-module.exports = { createUser, deleteUser, getUsers, updateUser, login, userById, getBestUser};
+module.exports = { createUser, deleteUser, getUsers, updateUser, login, userById, getBestUser, getCountUser};

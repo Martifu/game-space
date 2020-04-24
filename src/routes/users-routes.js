@@ -7,9 +7,10 @@ const router = express.Router();
 
 router.post('/login', usersController.login);
 router.post('/create', usersController.createUser);
-router.post('/update', isAuth, usersController.updateUser);
+router.post('/update', usersController.updateUser);
 router.post('/delete/:id', usersController.deleteUser);
 router.get('/get-users', usersController.getUsers);
 router.get('/getusersById/:id', usersController.userById);
+router.get('/getAllUserCount', usersController.getCountUser);
 
 module.exports = router;
