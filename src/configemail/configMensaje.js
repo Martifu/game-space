@@ -27,9 +27,9 @@ const mailOptions = {
  <table style="max-width: 600px; padding: 10px; margin:0 auto; border-collapse: collapse;">
  
  <tr>
-    <td style="background-color: #642EFE">
-       <div style="color: #34495e; margin: 4% 10% 2%; text-align: justify;font-family: sans-serif">
-          <h2 style="color: #00FF80; margin: 0 0 7px">Tu orden # ${data.id} </h2>
+    <td style="background-color: #000000">
+       <div style="color:#FFFFFF; margin: 4% 10% 2%; text-align: justify;font-family: sans-serif">
+          <h2 style="color: #FFFFFF; margin: 0 0 7px">Tu orden # ${data.id} </h2>
           <p style="margin: 2px; font-size: 15px">
              Gracias por la compra en nuestra tienda de juegos
           <div>
@@ -37,7 +37,7 @@ const mailOptions = {
           :)
           </div>
           <div style="width: 100%;margin:20px 0; display: inline-block;text-align: center">
-            
+            <img src="../assets/img/iphone.png">
           </div>
           <div style="width: 100%; text-align: center">
             
