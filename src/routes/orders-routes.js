@@ -9,4 +9,6 @@ router.post('/getOrdersDetails', ordersController.getOrdersDetails);
 router.post('/updateOrder', ordersController.updateOrder);
 router.post('/getTotal', ordersController.getTot);
 router.get('/getOneOrder/:id', ordersController.getOneOrder);
+router.get('/getCountOrders', ordersController.getCountOrders);
+router.post('/refound', ordersController.setOrderRefund);
 module.exports = router;

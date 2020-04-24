@@ -207,9 +207,32 @@
 
     }
 
-
-
-
+    async function setOrderRefund (req, res){
+        //MySQL
+        console.log(req.body);
+        const monto = 0;
+        const {reason, Orders_id } = req.body;
+        data={reason, Orders_id, monto};
+            
+        
+        try {
+            await MySQL.query('INSERT INTO `atiadmin_game_space`.`Refunds` set ?;',[data], async function (err, result, fields) { 
+                if (err) { 
+                // handle error      
+                
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                }else{ 
+                // Your row is inserted you can view 
+                res.status(200).send({status:"Ok", data:result});
+                }
+                
+            });
+        } catch (e) {
+            console.log('setOrderRefund error', e)
+            res.status(500).send({status:'ERROR',data:e.message});
+        }
+        
+    }
 //--------------------------------------------------- Estadisticas
 
 
@@ -353,6 +376,27 @@
         }
     };
 
+    const getCountOrders = (req, res) => {
+        
+        try {
+            
+            MySQL.query('SELECT count(created_at) as "cantidad" FROM atiadmin_game_space.Orders;', async function (err, result, fields) { 
+                if (err) {
+                console.log(err.sqlMessage);
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                }
+                console.log(result);
+                
+                res.status(200).send({status:"Ok", data:result});
+                
+            });
+            
+        } catch (e) {
+            console.log('getProfitsLastFiveMonths error', e)
+            res.status(500).send({status:'ERROR',data:e.message});
+        }
+    };
+
 
     module.exports = {create,
         getOrders,
@@ -364,4 +408,7 @@
         getProfitsMonth,
         getOrdersPerMonth,
         getProfitsLastFiveMonths,
-        getTot};
+        getTot,
+        getCountOrders,
+        setOrderRefund
+    };
