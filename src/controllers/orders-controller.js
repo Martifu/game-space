@@ -114,6 +114,29 @@
         }
     };
 
+    const getOrdersDetails = (req, res) => {
+            const{id} =  req.body
+        try {
+            
+            MySQL.query('SELECT * FROM atiadmin_game_space.Orders_details WHERE Orders_id = ' + id + ';', async function (err, result, fields) { 
+                if (err) {
+                console.log(err.sqlMessage);
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                }
+                console.log(result[0]['game_id']);
+                while (i < result.length) {
+        
+                }
+                res.status(200).send({status:"Ok", data:result});
+                
+            });
+            
+        } catch (e) {
+            console.log('getOrders error', e)
+            res.status(500).send({status:'ERROR',data:e.message});
+        }
+    };
+
     function updateOrder (req, res){
 
             console.log(req.body);
@@ -129,7 +152,6 @@
                 res.status(200).send({status:"Ok", data:result});
             });
         
-
     };
 
 
@@ -281,6 +303,7 @@
 
     module.exports = {create,
         getOrders,
+        getOrdersDetails,
         updateOrder,
         getSalesMonth,
         getProfits,
