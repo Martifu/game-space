@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.post('/create', ordersController.create);
 router.get('/getOrders', ordersController.getOrders);
+router.post('/getOrdersDetails', ordersController.getOrdersDetails);
 router.post('/updateOrder', ordersController.updateOrder);
 router.post('/getTotal', ordersController.getTot);
 router.get('/getOneOrder/:id', ordersController.getOneOrder);
