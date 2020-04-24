@@ -1,6 +1,7 @@
 const express = require('express');
 const routesv1 = require('./routes/index.js');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const dotenv = require('dotenv');
 var mongoose = require('mongoose');
 const path = require('path');
@@ -23,6 +24,8 @@ app.use((req, res, next) =>{
         res.send();
     });
 })
+
+app.use(cors());
 
 app.use('/static', express.static(path.join(__dirname, 'assets')))
 

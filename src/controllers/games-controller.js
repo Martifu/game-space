@@ -66,7 +66,7 @@ const getNewRelease = async (req,res) => {
 
 };
 
-const getGame_Search = async (req, res) =>{
+const getGame_Search = async (req, res) =>{ 
     
     try {
         
