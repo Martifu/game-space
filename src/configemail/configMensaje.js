@@ -1,24 +1,24 @@
 const nodemailer = require('nodemailer');
 
-module.exports = (formulario) => {
+module.exports = (data) => {
  var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-    user: 'game.space2020proyect', // Cambialo por tu email
+    user: 'game.space2020proyect@gmail.com', // Cambialo por tu email
     pass: 'contrasena123' // Cambialo por tu password
     }
  });
 
 const mailOptions = {
- from: `”${formulario.nombre} 👻” <${formulario.email}>`,
- to: `${formulario.email}`, // Cambia esta parte por el destinatario
+ from: `”${data.nombre} 👻” <${data.mail}>`,
+ to: `${data.mail}`, // Cambia esta parte por el destinatario
  subject:'Compra con exito - Game Spaces 2020',
  html: `
- <strong>Nombre:</strong> ${formulario.nombre} <br/>
- <strong>E-mail:</strong> ${formulario.email} <br/>
- <strong>Mensaje:</strong> ${formulario.mensaje}
+ <strong>Nombre:</strong> ${data.customer_name} <br/>
+ <strong>E-mail:</strong> ${data.email} <br/>
+ <strong>Mensaje:</strong> "Correo para verificar la compra"
 
- <div> Tu orden # ${formulario.orden_id} </div>
+ <div> Tu orden # ${data.id} </div>
  <div> 
  <h2>La compra se hizo con exito.</h2>
 
