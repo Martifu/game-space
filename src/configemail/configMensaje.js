@@ -61,7 +61,7 @@ const mailOptions = {
     </td>
  </tr>
 </table>
-<!--hasta aquí-->
+
  `
  };
 
