@@ -54,8 +54,10 @@ const mailOptions = {
  
 transporter.sendMail(mailOptions, function (err, info) {
  if (err)
- console.log(err)
+ console.log(err);
+return false;
  else
  console.log(info);
+return true;
  });
 }
