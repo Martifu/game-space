@@ -123,11 +123,30 @@
                 console.log(err.sqlMessage);
                 res.status(500).send({status:'ERROR',data:err.sqlMessage});
                 }
-                console.log(result[0]['game_id']);
-                while (i < result.length) {
-        
+                
+                const data = []; 
+                var i = 0;
+                while  (i < result.length) {
+                    
+                    const order = result[i];
+                    
+                    try {
+
+                        const game = await Games.findById(
+                            result[i]['game_id']
+                        );
+                        order['game_id'] = game;
+
+                        data[i] = order;
+                        
+                    } catch (error) {
+                        console.log('error');
+                    }
+
+                    
+                    i++;
                 }
-                res.status(200).send({status:"Ok", data:result});
+                res.status(200).send({status:"Ok", data:data});
                 
             });
             
