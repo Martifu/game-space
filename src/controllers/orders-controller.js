@@ -124,7 +124,8 @@
                 res.status(500).send({status:'ERROR',data:err.sqlMessage});
                 }
                 
-                const data = []; 
+                const data = [];
+                
                 var i = 0;
                 while  (i < result.length) {
                     
@@ -146,7 +147,17 @@
                     
                     i++;
                 }
-                res.status(200).send({status:"Ok", data:data});
+                MySQL.query('SELECT * FROM atiadmin_game_space.Orders WHERE id = ' + id + ';', async function (err, result, fields) { 
+                    if (err) {
+                    console.log(err.sqlMessage);
+                    res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                    }
+                    
+                    const Orden = result;
+                    res.status(200).send({status:"Ok", data:data, orden:Orden});
+                    
+                });
+                
                 
             });
             
@@ -206,7 +217,7 @@
             
         try {
             
-            MySQL.query('SELECT monthname(created_at) as "Month", year(created_at) as "Year", sum(total) as "Total" FROM atiadmin_game_space.Orders group by month(created_at) order by created_at limit 12;', async function (err, result, fields) { 
+            MySQL.query('SELECT month(created_at) as "Month", year(created_at) as "Year", sum(total) as "Total" FROM atiadmin_game_space.Orders group by month(created_at) order by created_at limit 12;', async function (err, result, fields) { 
                 if (err) {
                 console.log(err.sqlMessage);
                 res.status(500).send({status:'ERROR',data:err.sqlMessage});
@@ -248,7 +259,7 @@
         
         try {
             
-            MySQL.query('SELECT created_at as "DATE", monthname(created_at) as "Month", count(created_at) as "Count", sum(total) as "Total" FROM atiadmin_game_space.Orders where month(created_at) = MONTH(CURRENT_DATE()) group by day(created_at) order by created_at;', async function (err, result, fields) { 
+            MySQL.query('SELECT created_at as "DATE", month(created_at) as "Month", count(created_at) as "Count", sum(total) as "Total" FROM atiadmin_game_space.Orders where month(created_at) = MONTH(CURRENT_DATE()) group by day(created_at) order by created_at;', async function (err, result, fields) { 
                 if (err) {
                 console.log(err.sqlMessage);
                 res.status(500).send({status:'ERROR',data:err.sqlMessage});
@@ -269,7 +280,7 @@
         
         try {
             
-            MySQL.query('SELECT monthname(created_at) as "Mes" , count(created_at) as "cantidad" FROM atiadmin_game_space.Orders group by month(created_at) order by created_at limit 12;', async function (err, result, fields) { 
+            MySQL.query('SELECT month(created_at) as "Mes" , count(created_at) as "cantidad" FROM atiadmin_game_space.Orders group by month(created_at) order by created_at limit 12;', async function (err, result, fields) { 
                 if (err) {
                 console.log(err.sqlMessage);
                 res.status(500).send({status:'ERROR',data:err.sqlMessage});
@@ -290,7 +301,7 @@
         
         try {
             
-            MySQL.query('SELECT monthname(created_at) as "Mes" , count(created_at) as "cantidad", sum(total) as "ganancias" FROM atiadmin_game_space.Orders group by month(created_at) order by created_at limit 5;', async function (err, result, fields) { 
+            MySQL.query('SELECT month(created_at) as "Mes" , count(created_at) as "cantidad", sum(total) as "ganancias" FROM atiadmin_game_space.Orders group by month(created_at) order by created_at limit 5;', async function (err, result, fields) { 
                 if (err) {
                 console.log(err.sqlMessage);
                 res.status(500).send({status:'ERROR',data:err.sqlMessage});
