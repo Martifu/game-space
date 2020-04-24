@@ -134,7 +134,7 @@
 
 
     const getOneOrder = (req, res) => {
-        const {id} = req.body
+        const {id} = req.params
         try {
             
             MySQL.query('SELECT * FROM atiadmin_game_space.Orders where id = "'+ id+'"', async function (err, result, fields) { 
