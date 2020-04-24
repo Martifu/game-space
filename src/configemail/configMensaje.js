@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 module.exports = (data) => {
  var transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    service: 'gmail',
     auth: {
     user: 'game.space2020proyect@gmail.com', // Cambialo por tu email
     pass: 'contrasena123' // Cambialo por tu password
