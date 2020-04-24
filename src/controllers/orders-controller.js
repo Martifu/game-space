@@ -134,6 +134,7 @@
 
 
     const getOneOrder = (req, res) => {
+        console.log(req);
         const {id} = req.params
         try {
             
