@@ -114,6 +114,76 @@
         }
     };
 
+    const getOrdersDetails = (req, res) => {
+            const{id} =  req.body
+        try {
+            
+            MySQL.query('SELECT * FROM atiadmin_game_space.Orders_details WHERE Orders_id = ' + id + ';', async function (err, result, fields) { 
+                if (err) {
+                console.log(err.sqlMessage);
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                }
+                console.log(result[0]['game_id']);
+                const data = [];
+
+                while (i < result.length) {
+                    const detail = result[i];
+                    const game = await Games.findById(
+                        result[0]['game_id']
+                    );
+                    data = []
+                    i++;
+                }
+                res.status(200).send({status:"Ok", data:result});
+                
+            });
+            
+        } catch (e) {
+            console.log('getOrders error', e)
+            res.status(500).send({status:'ERROR',data:e.message});
+        }
+    };
+
+    function updateOrder (req, res){
+
+            console.log(req.body);
+            const {id, status} = req.body;
+
+            
+            MySQL.query('UPDATE `atiadmin_game_space`.`Orders` SET `status` = "'+status+'" WHERE (`id` = "'+id+'");', async function (err, result, fields) { 
+                if (err) { 
+                // handle error
+                console.log(err.sqlMessage);
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                }
+                res.status(200).send({status:"Ok", data:result});
+            });
+        
+    };
+
+
+    const getOneOrder = (req, res) => {
+        
+        try {
+            
+            MySQL.query('SELECT * FROM atiadmin_game_space.Orders where id = "'+ req.params.id+'"', async function (err, result, fields) { 
+                if (err) {
+                console.log(err.sqlMessage);
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                }
+                console.log(result);
+                
+                res.status(200).send({status:"Ok", data:result});
+                
+            });
+            
+        } catch (e) {
+            console.log('getSalesMonth error', e)
+            res.status(500).send({status:'ERROR',data:e.message});
+        }
+
+    }
+
 
 
 
@@ -263,6 +333,9 @@
 
     module.exports = {create,
         getOrders,
+        updateOrder,
+        getOneOrder,
+        getOrdersDetails,
         getSalesMonth,
         getProfits,
         getProfitsMonth,
