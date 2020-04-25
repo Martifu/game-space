@@ -233,6 +233,28 @@
         }
         
     }
+
+    const getRefunds = (req, res) => {
+            
+        try {
+            
+            MySQL.query('SELECT * FROM Orders inner join Refunds on Orders.id = Refunds.Orders_id', async function (err, result, fields) { 
+                if (err) {
+                console.log(err.sqlMessage);
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                }
+                console.log(result);
+                
+                res.status(200).send({status:"Ok", data:result});
+                
+            });
+            
+        } catch (e) {
+            console.log('getSalesMonth error', e)
+            res.status(500).send({status:'ERROR',data:e.message});
+        }
+    };
+
 //--------------------------------------------------- Estadisticas
 
 
@@ -410,5 +432,6 @@
         getProfitsLastFiveMonths,
         getTot,
         getCountOrders,
-        setOrderRefund
+        setOrderRefund,
+        getRefunds
     };
