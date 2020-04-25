@@ -11,5 +11,6 @@ router.post('/getTotal', ordersController.getTot);
 router.get('/getOneOrder/:id', ordersController.getOneOrder);
 router.get('/getCountOrders', ordersController.getCountOrders);
 router.post('/refound', ordersController.setOrderRefund);
+router.post('/getOrdersProfitPerYear', ordersController.getOrdersProfitPerYear);
 router.get('/getrefound', ordersController.getRefunds);
 module.exports = router;

@@ -342,6 +342,27 @@
         }
     };
 
+    const getOrdersProfitPerYear = (req, res) => {
+        const {year} = req.body;
+        try {
+            
+            MySQL.query('SELECT created_at as "Date", month(created_at) as "Month", YEAR(created_at) as "Year", count(created_at) as "Count", sum(total) as "Total" FROM atiadmin_game_space.Orders where YEAR(created_at) = '+year+' AND Orders.status != "canceled"  group by day(created_at) order by created_at;', async function (err, result, fields) { 
+                if (err) {
+                console.log(err.sqlMessage);
+                res.status(500).send({status:'ERROR',data:err.sqlMessage});
+                }
+                console.log(result);
+                
+                res.status(200).send({status:"Ok", data:result});
+                
+            });
+            
+        } catch (e) {
+            console.log('getOrdersProfitPerYear error', e)
+            res.status(500).send({status:'ERROR',data:e.message});
+        }
+    };
+
     const getProfitsLastFiveMonths = (req, res) => {
         
         try {
@@ -433,5 +454,6 @@
         getTot,
         getCountOrders,
         setOrderRefund,
-        getRefunds
+        getRefunds,
+        getOrdersProfitPerYear
     };
