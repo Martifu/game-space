@@ -1,4 +1,5 @@
 const Games = require('../mongo/models/games-model')
+const Historia = require('../mongo/models/historia_model')
 const MySQL = require ('../sql/database');
 
 const createGame = async (req, res) => {
@@ -30,7 +31,7 @@ const createGame = async (req, res) => {
 const getGames = async (req, res) => {
     
     try {
-        const games = await Games.find();
+        const games = await Historia.find();
         res.send({status:'OK',data:games})
     } catch (error) {
         console.log('getGames error',error);
