@@ -5,24 +5,27 @@ const MySQL = require ('../sql/database');
 const createGame = async (req, res) => {
     console.log(req.body);
     try {
-        const {title, price, image, description, rank, year,category, sales} = req.body;
+        const {
+            url_file,
+            url_miniatura,
+            descripcion,
+            tipo,
+            duracion
+        } = req.body;
 
         //Mongo
-        const game = await Games.create({
-            title,
-            description,
-            price,
-            image,
-            category,
-            year,
-            rank,
-            sales
+        const historia = await Historia.create({
+            url_file,
+            url_miniatura,
+            descripcion,
+            tipo,
+            duracion
         });
         
         
-        res.status(200).send({statis:"ok", message:"Se registro correctamente" ,data:game})
+        res.status(200).send({statis:"ok", message:"Se registro correctamente" ,data:historia})
     } catch (e) {
-        console.log('createProduct error', e)
+        console.log('createHistoria error', e)
         res.status(500).send({status:'ERROR',data:e.message})
     }
 };
